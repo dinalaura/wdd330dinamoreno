@@ -1,0 +1,18 @@
+body {
+    background-color: rgb(247, 230, 211);
+}
+
+h1, ol{
+    text-align: center;
+}
+
+h1{
+    color:  rgb(247, 230, 211);
+    background-color: blueviolet;
+}
+ol{
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+}
