@@ -2,18 +2,22 @@ body {
     background-color: rgb(247, 230, 211);
 }
 
-h1, ol, h2{
+h1,
+ol,
+h2 {
     text-align: center;
 }
 
-h1{
-    color:  rgb(247, 230, 211);
+h1 {
+    color: rgb(247, 230, 211);
     background-color: blueviolet;
 }
-ol{
+
+ol {
     font-weight: bold;
 }
-a{
+
+a {
     text-decoration: none;
 }
 
