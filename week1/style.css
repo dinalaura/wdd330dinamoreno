@@ -2,7 +2,7 @@ body {
     background-color: rgb(247, 230, 211);
 }
 
-h1, ol{
+h1, ol, h2{
     text-align: center;
 }
 
@@ -15,4 +15,8 @@ ol{
 }
 a{
     text-decoration: none;
+}
+
+p {
+    margin-left: 15em;
 }
