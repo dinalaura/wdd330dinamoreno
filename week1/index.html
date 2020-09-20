@@ -17,69 +17,62 @@ WDD 330 W01
 
  
 
-This week I learned about UX. When creating an app, you may want to design for small and less powerful devices and focus on the content. I realized how I used to have just one device, a desktop computer, but now I manipulate more computers and phones (The paradigm shift). Developers must think about many different screen sizes when working on a project.  
+This week I learned about UX. When creating an app, you may want to design for small <br>
+and less powerful devices and focus on the content. I realized how I used to have just one device, <br>
+a desktop computer, but now I manipulate more computers and phones (The paradigm shift).<br>
+ Developers must think about many different screen sizes when working on a project.  <br>
+ <br>
+When developing a mobile user experience, the developer must reduce steps, as much as <br>
+possible, for the user to keep using the app and take care of the reachability and speed of the app. <br>
+Speed can improve when optimizing images, CSS, JS, and using SVG. <br>
+<br>
+When working on mobile devices, frequently used menus work better on the bottom part <br>
+of the app. Make simple forms, use autofill, and number keypad when needed. Make <br>
+advertisements small for browsing on mobile; stop using pop-ups and use the content first.  <br>
+<br>
+I learned in the virtual lab about local storage, as well as doing stuff with web things. <br>
+A function may be used to save in the local storage and use it in a program.  <br>
+<br>
+And example from the book: <br>
+<br>
+function loadStory(){ <br>
+var storyName = document.getElementById(“name_input”).value var storyHTML = localStorage.getItem(storyName) document.getElementById(“story_editor”).value = storyHTML  <br>
+10 } <br>
+<br>
+I also learned how to set my portfolio, and this is the code from it.  <br>
+<br>
+const links = [{ <br>
+    label: "Week1 notes", <br>
+    url: "week1/index.html" <br>
+  }, <br>
+  <br>
+  { <br>
+    label: "Week2 notes", <br>
+    url: "week2/index.html" <br>
+  } <br>
+] <br>
+<br>
+const myList = document.querySelector("ol"); <br>
+<br>
+links.forEach(links => { <br>
 
-When developing a mobile user experience, the developer must reduce steps, as much as possible, for the user to keep using the app and take care of the reachability and speed of the app. Speed can improve when optimizing images, CSS, JS, and using SVG. 
+  let item = document.createElement("li"); <br>
 
-When working on mobile devices, frequently used menus work better on the bottom part of the app. Make simple forms, use autofill, and number keypad when needed. Make advertisements small for browsing on mobile; stop using pop-ups and use the content first.  
+  let anchor = document.createElement("a"); <br>
 
- 
+  anchor.setAttribute("href", links.url); <br>
 
-I learned in the virtual lab about local storage, as well as doing stuff with web things. A function may be used to save in the local storage and use it in a program.  
+  anchor.innerText = links.label; <br>
 
-And example from the book: 
+  <br>
 
-function loadStory(){ 
+  item.appendChild(anchor); <br>
 
-var storyName = document.getElementById(“name_input”).value var storyHTML = localStorage.getItem(storyName) document.getElementById(“story_editor”).value = storyHTML  
+  myList.appendChild(item);  <br>
 
-10 } 
+}); <br>
 
-I also learned how to set my portfolio, and this is the code from it.  
-
-const links = [{ 
-
-    label: "Week1 notes", 
-
-    url: "week1/index.html" 
-
-  }, 
-
-  { 
-
-    label: "Week2 notes", 
-
-    url: "week2/index.html" 
-
-  } 
-
-] 
-
-  
-
-const myList = document.querySelector("ol"); 
-
-  
-
-links.forEach(links => { 
-
-  let item = document.createElement("li"); 
-
-  let anchor = document.createElement("a"); 
-
-  anchor.setAttribute("href", links.url); 
-
-  anchor.innerText = links.label; 
-
-   
-
-  item.appendChild(anchor); 
-
-  myList.appendChild(item);  
-
-}); 
-
- 
+<br>
     </p>
 </body>
 </html>
