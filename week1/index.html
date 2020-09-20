@@ -10,6 +10,76 @@
 <body>
     <h1>WDD 330: Portfolio</h1>
     <h2>Notes</h2>
-    <p></p>
+    <p>
+        Dina Moreno Guevara 
+
+WDD 330 W01 
+
+ 
+
+This week I learned about UX. When creating an app, you may want to design for small and less powerful devices and focus on the content. I realized how I used to have just one device, a desktop computer, but now I manipulate more computers and phones (The paradigm shift). Developers must think about many different screen sizes when working on a project.  
+
+When developing a mobile user experience, the developer must reduce steps, as much as possible, for the user to keep using the app and take care of the reachability and speed of the app. Speed can improve when optimizing images, CSS, JS, and using SVG. 
+
+When working on mobile devices, frequently used menus work better on the bottom part of the app. Make simple forms, use autofill, and number keypad when needed. Make advertisements small for browsing on mobile; stop using pop-ups and use the content first.  
+
+ 
+
+I learned in the virtual lab about local storage, as well as doing stuff with web things. A function may be used to save in the local storage and use it in a program.  
+
+And example from the book: 
+
+function loadStory(){ 
+
+var storyName = document.getElementById(“name_input”).value var storyHTML = localStorage.getItem(storyName) document.getElementById(“story_editor”).value = storyHTML  
+
+10 } 
+
+I also learned how to set my portfolio, and this is the code from it.  
+
+const links = [{ 
+
+    label: "Week1 notes", 
+
+    url: "week1/index.html" 
+
+  }, 
+
+  { 
+
+    label: "Week2 notes", 
+
+    url: "week2/index.html" 
+
+  } 
+
+] 
+
+  
+
+const myList = document.querySelector("ol"); 
+
+  
+
+links.forEach(links => { 
+
+  let item = document.createElement("li"); 
+
+  let anchor = document.createElement("a"); 
+
+  anchor.setAttribute("href", links.url); 
+
+  anchor.innerText = links.label; 
+
+   
+
+  item.appendChild(anchor); 
+
+  myList.appendChild(item);  
+
+}); 
+
+ 
+    </p>
 </body>
 </html>
