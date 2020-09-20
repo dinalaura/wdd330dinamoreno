@@ -1,79 +1,79 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Dina Moreno G Portfolio - WDD 330">
-    <title>WDD 330 Dina Moreno G.</title>
-    <link rel="stylesheet" href=".../css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dina Moreno G Portfolio - WDD 330">
+  <title>WDD 330 Dina Moreno G.</title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
-    <h1>WDD 330: Portfolio</h1>
-    <h2>Notes</h2>
-    <p>
-        Dina Moreno Guevara 
-
-WDD 330 W01 
-
- 
-
-This week I learned about UX. When creating an app, you may want to design for small <br>
-and less powerful devices and focus on the content. I realized how I used to have just one device, <br>
-a desktop computer, but now I manipulate more computers and phones (The paradigm shift).<br>
- Developers must think about many different screen sizes when working on a project.  <br>
- <br>
-When developing a mobile user experience, the developer must reduce steps, as much as <br>
-possible, for the user to keep using the app and take care of the reachability and speed of the app. <br>
-Speed can improve when optimizing images, CSS, JS, and using SVG. <br>
-<br>
-When working on mobile devices, frequently used menus work better on the bottom part <br>
-of the app. Make simple forms, use autofill, and number keypad when needed. Make <br>
-advertisements small for browsing on mobile; stop using pop-ups and use the content first.  <br>
-<br>
-I learned in the virtual lab about local storage, as well as doing stuff with web things. <br>
-A function may be used to save in the local storage and use it in a program.  <br>
-<br>
-And example from the book: <br>
-<br>
-function loadStory(){ <br>
-var storyName = document.getElementById(“name_input”).value <br>
-var storyHTML = localStorage.getItem(storyName) document.getElementById(“story_editor”).value = storyHTML  <br>
-10 } <br>
-<br>
-I also learned how to set my portfolio, and this is the code from it.  <br>
-<br>
-const links = [{ <br>
+  <h1>WDD 330: Portfolio</h1>
+  <h2>Notes</h2>
+  <p>
+    Dina Moreno Guevara <br>
+    WDD 330 W01 <br>
+    <br>
+    This week I learned about UX. When creating an app, you may want to design for small <br>
+    and less powerful devices and focus on the content. I realized how I used to have just one device, <br>
+    a desktop computer, but now I manipulate more computers and phones (The paradigm shift).<br>
+    Developers must think about many different screen sizes when working on a project. <br>
+    <br>
+    When developing a mobile user experience, the developer must reduce steps, as much as <br>
+    possible, for the user to keep using the app and take care of the reachability and speed of the app. <br>
+    Speed can improve when optimizing images, CSS, JS, and using SVG. <br>
+    <br>
+    When working on mobile devices, frequently used menus work better on the bottom part <br>
+    of the app. Make simple forms, use autofill, and number keypad when needed. Make <br>
+    advertisements small for browsing on mobile; stop using pop-ups and use the content first. <br>
+    <br>
+    I learned in the virtual lab about local storage, as well as doing stuff with web things. <br>
+    A function may be used to save in the local storage and use it in a program. <br>
+    <br>
+    And example from the book: <br>
+    <br>
+    function loadStory(){ <br>
+    var storyName = document.getElementById(“name_input”).value <br>
+    var storyHTML = localStorage.getItem(storyName) document.getElementById(“story_editor”).value = storyHTML <br>
+    10 } <br>
+    <br>
+    I also learned how to set my portfolio, and this is the code from it. <br>
+    <br>
+    const links = [{ <br>
     label: "Week1 notes", <br>
     url: "week1/index.html" <br>
-  }, <br>
-  <br>
-  { <br>
+    }, <br>
+    <br>
+    { <br>
     label: "Week2 notes", <br>
     url: "week2/index.html" <br>
-  } <br>
-] <br>
-<br>
-const myList = document.querySelector("ol"); <br>
-<br>
-links.forEach(links => { <br>
+    } <br>
+    ] <br>
+    <br>
+    const myList = document.querySelector("ol"); <br>
+    <br>
+    links.forEach(links => { <br>
 
-  let item = document.createElement("li"); <br>
+    let item = document.createElement("li"); <br>
 
-  let anchor = document.createElement("a"); <br>
+    let anchor = document.createElement("a"); <br>
 
-  anchor.setAttribute("href", links.url); <br>
+    anchor.setAttribute("href", links.url); <br>
 
-  anchor.innerText = links.label; <br>
+    anchor.innerText = links.label; <br>
 
-  <br>
+    <br>
 
-  item.appendChild(anchor); <br>
+    item.appendChild(anchor); <br>
 
-  myList.appendChild(item);  <br>
+    myList.appendChild(item); <br>
 
-}); <br>
+    }); <br>
 
-<br>
-    </p>
+    <br>
+  </p>
 </body>
+
 </html>
