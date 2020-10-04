@@ -179,107 +179,100 @@ const batman = '{"name": "Batman","real name": "Bruce <br>
 ➥ Wayne","height": 74, "weight": 210, "hero": true, "villain": ➥ false, "allies": ["Robin","Batgirl","Superman"]}' <br>
 <br><br>
 Document Object Model <br>
-The Document Object Model (DOM) allows you to access elements of a web page and enable interaction with the page by adding and removing elements, changing the order, content and attributes of elements, and even altering how they are styled. 
+The Document Object Model (DOM) allows you to access elements of a web page <br>
+and enable interaction with the page by adding and removing elements, changing the order,<br>
+content and attributes of elements, and even altering how they are styled. <br>
+<br>
+The Document Object Model, or DOM for short, represents an HTML document <br>
+as a network of connected nodes that form a tree-like structure. The DOM treats <br>
+everything on a web page as a node. The HTML tag is the root node, and every <br>
+other part of the document is a child node of this. <br>
+<br>
+The DOM is not actually part of JavaScript because it is language agnostic. <br>
+This means it can be used in any programming language, not just JavaScript. <br>
+We can use JavaScript to access and modify different parts of a web page <br>
+using a special built-in object called document. <br>
+<br>
+The DOM provides several methods that allow us to access any element on a page.<br>
+These objects can then be assigned to a variable and be inspected or modified: <br>
+const body = document.body; <br>
+<br>
+All nodes have a numerical code to signify what type they are. <br>
+These are summmarized in the table below. <br>
+Code Type  <br>
+1  element  <br>
+2  attribute  <br>
+3  text  <br>
+8  comment  <br>
+9  body <br>
+<br>
+The getElementById() method does exactly what it says on the title. <br>
+It returns a reference to the element with a unique id attribute that is given as an argument: <br>
+const h1 = document.getElementById('title'); <br>
+The document.querySelector() method allows you to use CSS notation to find <br>
+the first element in the document that matches a CSS selector provided as an argument. <br>
+If no elements match, it will return null. <br>
+the following could be used instead of document.getElementById(): <br>
+document.querySelector('#bats'); << < li class="vigilante hero"  <br>
+➥ id="bats">Batman</ li > <br>
+<br>
+The setAttribute can change the value of an element’s attributes. <br>
+It takes two arguments: the attribute that you wish to change, <br>
+and the new value of that attribute. <br>
+wonderWoman.setAttribute('class', 'villain'); << undefined  <br>
+wonderWoman.getAttribute('class'); << "villain" <br>
+<br>
+<br>
+Events<br> 
+The DOM is an interface that allows you to use JavaScript to interact with a web page. <br>
+Events are another part of the DOM and they are what provides the link between<br>
+ the web page and user interactions. Every time a user interacts with a web page, <br>
+ such as clicking on a link, pressing a key, or moving a mouse, an event occurs <br>
+ that our program can detect and then respond to. <br>
+ <br>
+Event listeners are like setting a notification to alert you when something happens. <br>
+Instead of the program having to constantly check to see if an event has occurred, <br>
+the event listener will let it know when the event happens, and the program can then <br>
+respond appropriately. <br>
+<br>
+JavaScript uses a non-blocking approach that uses event listeners to listen out <br>
+for any clicks on the page: <br>
+document.body.addEventListener("click", doSomething); <br>
+<br>
+<br>
+The following is part of the code of the game in the textbook,<br>
+ in this code the variables are set, and then the program access the DOM <br>
+ with query selectors and getting elements by id: <br>
+ <br>
+const quiz = [ <br>
 
-The Document Object Model, or DOM for short, represents an HTML document as a network of connected nodes that form a tree-like structure. The DOM treats everything on a web page as a node. The HTML tag is the root node, and every other part of the document is a child node of this. 
+              { name: "Superman",realName: "Clark Kent" }, <br>
 
-The DOM is not actually part of JavaScript because it is language agnostic. This means it can be used in any programming language, not just JavaScript. We can use JavaScript to access and modify different parts of a web page using a special built-in object called document. 
+              { name: "Wonderwoman",realName: "Dianna Prince" }, <br>
 
-The DOM provides several methods that allow us to access any element on a page. These objects can then be assigned to a variable and be inspected or modified: 
+              { name: "Batman",realName: "Bruce Wayne" }, <br>
 
-const body = document.body; 
-
-All nodes have a numerical code to signify what type they are. These are summmarized in the table below. 
-
-Code Type  
-
-1  element  
-
-2  attribute  
-
-3  text  
-
-8  comment  
-
-9  body 
-
- 
-
-The getElementById() method does exactly what it says on the tin. It returns a reference to the element with a unique id attribute that is given as an argument: 
-
-const h1 = document.getElementById('title'); 
-
-The document.querySelector() method allows you to use CSS notation to find the first element in the document that matches a CSS selector provided as an argument. If no elements match, it will return null. 
-
-the following could be used instead of document.getElementById(): 
-
-document.querySelector('#bats'); << <li class="vigilante hero"  
-
-➥ id="bats">Batman</li> 
-
- 
-
-The setAttribute can change the value of an element’s attributes. It takes two arguments: the attribute that you wish to change, and the new value of that attribute. 
-
-wonderWoman.setAttribute('class', 'villain'); << undefined  
-
-wonderWoman.getAttribute('class'); << "villain" 
-
- 
-
-Events 
-
-The DOM is an interface that allows you to use JavaScript to interact with a web page. Events are another part of the DOM and they are what provides the link between the web page and user interactions. Every time a user interacts with a web page, such as clicking on a link, pressing a key, or moving a mouse, an event occurs that our program can detect and then respond to. 
-
-Event listeners are like setting a notification to alert you when something happens. Instead of the program having to constantly check to see if an event has occurred, the event listener will let it know when the event happens, and the program can then respond appropriately. 
-
-JavaScript uses a non-blocking approach that uses event listeners to listen out for any clicks on the page: 
-
-document.body.addEventListener("click", doSomething); 
-
- 
-
-The following is part of the code of the game in the textbook, in this code the variables are set, and then the program access the DOM with query selectors and getting elements by id: 
-
- 
-
-const quiz = [ 
-
-              { name: "Superman",realName: "Clark Kent" }, 
-
-              { name: "Wonderwoman",realName: "Dianna Prince" }, 
-
-              { name: "Batman",realName: "Bruce Wayne" }, 
-
-            ]; 
-
-  
-
-// View Object 
-
-const view = { 
-
-  score: document.querySelector('#score strong'), 
-
-  question: document.getElementById('question'), 
-
-  result: document.getElementById('result'), 
-
-  info: document.getElementById('info'), 
-
-  render(target,content,attributes) { 
-
-      for(const key in attributes) { 
-
-        target.setAttribute(key, attributes[key]); 
-
-      } 
-
-      target.innerHTML = content; 
-
-  } 
-
-}; 
+            ]; <br>
+            <br>
+// View Object <br>
+<br>
+const view = { <br>
+  score: document.querySelector('#score strong'), <br>
+  question: document.getElementById('question'), <br>
+  result: document.getElementById('result'), <br>
+  info: document.getElementById('info'), <br>
+  render(target,content,attributes) { <br>
+      for(const key in attributes) { <br>
+        <br>
+        target.setAttribute(key, attributes[key]); <br>
+        <br>
+      } <br>
+      <br>
+      target.innerHTML = content; <br>
+      <br>
+  } <br>
+  <br>
+}; <br>
 <br>
  https://codepen.io/daz4126/pen/LLdJww <br>
 
