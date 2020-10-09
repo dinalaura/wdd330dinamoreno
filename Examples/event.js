@@ -1,7 +1,5 @@
-document.querySelector("div").addEventListener('touchend', () => 
-document.querySelector("div").innerHTML = "O";
 
 
-//function myFunction() {
-  //  document.querySelector("div").innerHTML = "O";
-  //}
+document.getElementById("div").addEventListener.function myFunction() {
+  document.querySelector("div").innerHTML = "O";
+}
