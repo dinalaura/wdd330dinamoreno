@@ -179,88 +179,95 @@
     <br>
     ]; <br>
     <br>
-    This method to take into account that the response from the player comes from clicking on a button rather than submitting a form on the ninja project: 
-    
-    check(event){ 
-    
-    console.log('check(event) invoked'); 
-    
-    const response = event.target.textContent; 
-    
-    const answer = this.question.realName; 
-    
-    if(response === answer){ 
-    
-    view.render(view.result,'Correct!',{'class':'correct'}); 
-    
-    this.score++; 
-    
-    view.render(view.score,this.score); 
-    
-    } else { 
-    
-    view.render(view.result,`Wrong! The correct answer was ${answer}`,{'class':'wrong'}); 
-    
-    } 
-    
-    this.ask(); 
-    
-    } 
-    
-    https://codepen.io/daz4126/pen/Kqojgj 
-    
-    Modular JavaScript 
-    
-    A module is a self-contained piece of code that provides functions and methods that can then be used in other files and by other modules. The code in a module should have a single purpose, and group together functions with distinct functionality. 
-    
-    Keeping code modular helps to make it more loosely coupled and interchangeable, meaning you can easily swap one module for another without affecting other parts of a project. Modules also allow a public API to be exposed, while keeping the implementation hidden away inside the module. 
-    
-    Coupling 
-    
-    The coupling of code refers to how dependent certain elements or modules of code are on each other. Two pieces of code are said to be tightly coupled if one relies on the other to run. 
-    
-    It is considered good design to keep code as loosely coupled as possible as this allows for the most flexibility in developing systems of code, as different modules can be used independently and in a variety of different applications, rather than being restricted to a single use-case. 
-    
-    ES6 Modules 
-    
-    For a long time, JavaScript didn’t support modules, but native support for them was finally added in ES6. They allow you to keep parts of code in self-contained files.  
-    
-    There are a few important points about modules that are worth keeping in mind:  
-    
-    All code in modules is always in strict mode without the need for 'use strict' and there is no way to opt out of this. 
-    A module has its own global scope, so any variables created in the top-level of a module can only be accessed within that module. 
-    The value of this in the top level of a module is undefined, rather than the global object. 
-    You can’t use HTML-style comments in modules 
-    
-    A ES6 module file is just a normal JavaScript file, but uses the keyword export to specify any values or functions that are to be made available from the module. 
-    
-    a very simple Pi module would have the following code saved in a file called pi.js: 
-    
-    export const PI = 3.1415926; 
-    
-    This would then be imported into your main JavaScript file, main.js using the following code: 
-    
-    import { PI } from './pi.js'; 
-    
-    This would then allow you to use the variable PI inside the main.js file. 
-    
-    If there are lots of values and functions that need to be imported, then everything in a module file can be imported using the wildcard symbol * along with a namespace for the imported values and functions using the following notation: 
-    
-    import * as stats from './stats.js'; 
-    
-    This will then import all the functions from the stats.js module and they’ll be given a namespace of stats. So, the mean function could be used as follows: 
-    
-    stats.mean([2,6,10]); 
-    
-    Node.js Modules 
-    
-    Node.js had already implemented modules before they were introduced in ES6, and used a slightly different notation called Common JS modules 
-    
-    it is expected that Node.js will support ES6 modules in some way in the future. 
-    
-     
-    
-     
+    This method to take into account that the response from the player comes from clicking on a button <br>
+    rather than submitting a form on the ninja project: <br>
+    <br>
+    check(event){ <br>
+        <br>
+    console. log('check(event) invoked'); <br>
+    <br>
+    const response = event.target.textContent; <br>
+    <br>
+    const answer = this.question.realName; <br>
+    <br>
+    if(response === answer){ <br>
+        <br>
+    view.render(view.result,'Correct!',{'class':'correct'}); <br>
+    <br>
+    this.score++; <br>
+    <br>
+    view.render(view.score,this.score); <br>
+    <br>
+    } else { <br>
+        <br>
+    view.render(view.result,`Wrong! The correct answer was ${answer}`,{'class':'wrong'}); <br>
+    <br>
+    } <br>
+    <br>
+    this.ask();<br> 
+    <br>
+    } <br>
+    <br>
+    <a href="https://codepen.io/daz4126/pen/Kqojgj"></a><br>
+    <br>
+    Modular JavaScript <br>
+    <br>
+    A module is a self-contained piece of code that provides functions and methods <br>
+    that can then be used in other files and by other modules. The code in a module<br>
+    should have a single purpose, and group together functions with distinct functionality. <br>
+     <br>
+    Keeping code modular helps to make it more loosely coupled and interchangeable, <br>
+    meaning you can easily swap one module for another without affecting other parts of a project. <br>
+    Modules also allow a public API to be exposed, while keeping the implementation hidden away inside the module. <br>
+    <br>
+    Coupling <br>
+    The coupling of code refers to how dependent certain elements or modules of code are on each other.<br>
+    Two pieces of code are said to be tightly coupled if one relies on the other to run. <br>
+    It is considered good design to keep code as loosely coupled as possible <br>
+    as this allows for the most flexibility in developing systems of code,<br>
+    as different modules can be used independently and in a variety of different applications, <br>
+    rather than being restricted to a single use-case. <br>
+    <br>
+    ES6 Modules <br>
+    <br>
+    For a long time, JavaScript didn’t support modules, but native support for them was finally added in ES6. <br>
+    They allow you to keep parts of code in self-contained files.  <br>
+    <br>
+    There are a few important points about modules that are worth keeping in mind:  <br>
+    <br>
+    All code in modules is always in strict mode without the need for 'use strict' and there is no way to opt out of this. <br>
+    A module has its own global scope, so any variables created in the top-level of a module can only be accessed within that module. <br>
+    The value of this in the top level of a module is undefined, rather than the global object. <br>
+    You can’t use HTML-style comments in modules <br>
+    <br>
+    A ES6 module file is just a normal JavaScript file, but uses the keyword export to specify <br>
+    any values or functions that are to be made available from the module.
+    a very simple Pi module would have the following code saved in a file called pi.js: <br>
+    <br>
+    export const PI = 3.1415926; <br>
+    <br>
+    This would then be imported into your main JavaScript file, main.js using the following code: <br>
+    <br>
+    import { PI } from './pi.js'; <br>
+    <br>
+    This would then allow you to use the variable PI inside the main.js file. <br>
+    <br>
+    If there are lots of values and functions that need to be imported, <br>
+    then everything in a module file can be imported using the wildcard symbol * along with a namespace<br>
+    for the imported values and functions using the following notation: <br>
+    <br>
+    import * as stats from './stats.js'; <br>
+    <br>
+    This will then import all the functions from the stats.js module and they’ll be given a namespace of stats.<br>
+    So, the mean function could be used as follows: <br>
+    <br>
+    stats.mean([2,6,10]); <br>
+    <br>
+    Node.js Modules <br>
+    <br>
+    Node.js had already implemented modules before they were introduced in ES6,<br>
+     and used a slightly different notation called Common JS modules <br>
+     it is expected that Node.js will support ES6 modules in some way in the future. <br>   
 </p>
 </body>
 </html>
