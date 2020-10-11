@@ -40,146 +40,145 @@
     < script src='main.js'></ script> </ body> <br>
     </ html> <br>
     <br>
-    <a src="https://codepen.io/Dina-Laura/pen/ExyjgQw"> </a><br>
+    <a href="https://codepen.io/Dina-Laura/pen/ExyjgQw"> </a><br>
     <br>
     Accessing Form Elements <br>
     <br>
-    The legacy DOM had a useful property called document .forms that returns an HTML collection of all the forms in the document in the order they appear in the markup. 
-    
-    Form Events 
-    
-    Forms trigger a number of events. 
-    
-    The focus event occurs when an element is focused on. In the case of an <input> element, this is when the cursor is placed inside the element (either by clicking or tapping on it or navigating to it using the keyboard). 
-    
-    const input = form.elements.searchInput;  
-    
-    input.addEventListener('focus', () => alert('focused'), ➥ false); 
-    
-    The blur event occurs when the user moves the focus away from the form element. 
-    
-    input.addEventListener('blur', () => alert('blurred'), ➥ false); 
-    
-    The change event occurs when the user moves the focus away from the form element after changing it. 
-    
-    input.addEventListener('change', () => alert('changed'), ➥ false); 
-    
-    Possibly the most important form event is the submit event, occurring when the form is submitted. Usually this will send the content of the form to the server to be processed. 
-    
-    Retrieving and Changing Values From a Form 
-    
-    Text input element objects have a value property that can be used to retrieve the text inside the field. 
-    
-    We can use this to report back what the user has searched for. Edit the search() function to the following: 
-    
-    function search(event) { 
-    alert(`You Searched for: ${input.value}`); event.preventDefault(); 
-    } 
-    
-    The placeholder Attribute 
-    
-    Similar functionality can be produced in modern browsers using the placeholder attribute in the HTML markup. Simply change the input field to the following in search.html: 
-    
-    <input type='text' name='search-box' placeholder='Search ➥ Here'> 
-    
-    Form Controls 
-    
-    Some common types of form control are: 
-    
-    <input> fields, including text, passwords, check boxes, radio buttons, and file uploads  
-    
-    <select> menus for drop-down lists of options <textarea> elements for longer text entry 
-    <button> elements for submitting and resetting forms 
-    
-    Input Fields 
-    
-    Input fields are the most common types of form control, but there are several categories of input field 
-    
-    Text Input Fields 
-    
-    The default type of input field is text, which is used for entering a short piece of text, such as a username. 
-    
-    Password Input Fields 
-    
-    Input type='password' is used to enter passwords or secret information. 
-    
-    Checkbox Input Fields 
-    
-    Check boxes are created using input fields with type='checkbox'. They are used to select different options that can be checked (true) or left unchecked (false). The user can select more than one checkbox from a list. 
-    
-    Radio Button Input Fields 
-    
-    Radio buttons are created using input fields with type='radio'. Like checkboxes they allow users to check an option as true, but they provide an exclusive choice of options, so only one option can be selected. 
-    
-    Hidden Input Fields 
-    
-    Hidden fields can be created using input fields with type='hidden'. These are not displayed by the browser, but have a value attribute that can contain information that is submitted with the form. 
-    
-    File Input Fields 
-    
-    A file input field can be created using input fields with type='file'. These are used to upload files, and most browsers will provide a browse button or similar that lets users select a file from their file system. 
-    
-    Form Validation 
-    
-    Form validation is the process of checking whether a user has entered the information into a form correctly. Examples of the types of validation that occur include ensuring that:  
-    
-    A required field is completed 
-    An email address is valid 
-    A number is entered when numerical data is required A password is at least a minimum number of characters 
-    
-    Form Quiz Ninja 
-    
-    https://codepen.io/daz4126/pen/ZyoyOz 
-    
+    The legacy DOM had a useful property called document .forms that returns an HTML collection<br>
+    of all the forms in the document in the order they appear in the markup. <br>
+    <br>
+    Form Events <br>
+    Forms trigger a number of events. <br>
+    The focus event occurs when an element is focused on. In the case of an < input > element, <br>
+    this is when the cursor is placed inside the element (either by clicking or tapping on it <br>
+    or navigating to it using the keyboard). <br>
+    <br>
+    const input = form.elements.searchInput;  <br>
+    <br>
+    input.addEventListener('focus', () => alert('focused'), ➥ false); <br>
+    <br>
+    The blur event occurs when the user moves the focus away from the form element. <br>
+    <br>
+    input.addEventListener('blur', () => alert('blurred'), ➥ false); <br>
+    <br>
+    The change event occurs when the user moves the focus away from the form element after changing it. <br>
+    <br>
+    input.addEventListener('change', () => alert('changed'), ➥ false); <br>
+    <br>
+    Possibly the most important form event is the submit event, occurring when the form is submitted. <br>
+    Usually this will send the content of the form to the server to be processed. <br>
+    <br>
+    Retrieving and Changing Values From a Form <br>
+    Text input element objects have a value property that can be used to retrieve the text inside the field. <br>
+    We can use this to report back what the user has searched for. Edit the search() function to the following: <br>
+    <br>
+    function search(event) { <br>
+    alert (`You Searched for: ${input.value}`); event.preventDefault(); <br>
+    } <br>
+    <br>
+    The placeholder Attribute <br>
+    Similar functionality can be produced in modern browsers using the placeholder attribute in the HTML markup. <br>
+    Simply change the input field to the following in search.html: <br>
+    <br>
+    < input type='text' name='search-box' placeholder='Search ➥ Here' > <br>
+    <br>
+    Form Controls <br>
+    <br>
+    Some common types of form control are: <br>
+    < input > fields, including text, passwords, check boxes, radio buttons, and file uploads  <br>
+    < select > menus for drop-down lists of options <br>
+    < textarea > elements for longer text entry <br>
+    < button > elements for submitting and resetting forms <br>
+    <br>
+    Input Fields <br>
+    Input fields are the most common types of form control, but there are several categories of input field <br>
+    <br>
+    Text Input Fields <br>
+    The default type of input field is text, which is used for entering a short piece of text, such as a username. <br>
+    <br>
+    Password Input Fields <br>
+    Input type='password' is used to enter passwords or secret information. <br>
+    <br>
+    Checkbox Input Fields <br>
+    Check boxes are created using input fields with type='checkbox'. They are used to select different <br>
+    options that can be checked (true) or left unchecked (false). The user can select more than one checkbox from a list. <br>
+    <br>
+    Radio Button Input Fields <br>
+    Radio buttons are created using input fields with type='radio'. Like checkboxes they allow users to check an option as true, <br>
+    but they provide an exclusive choice of options, so only one option can be selected. <br>
+    <br>
+    Hidden Input Fields <br>
+    Hidden fields can be created using input fields with type='hidden'. These are not displayed by the browser, <br>
+    but have a value attribute that can contain information that is submitted with the form. <br>
+    <br>
+    File Input Fields <br>
+    A file input field can be created using input fields with type='file'. These are used to upload files, <br>
+    and most browsers will provide a browse button or similar that lets users select a file from their file system. <br>
+    <br>
+    Form Validation <br>
+    Form validation is the process of checking whether a user has entered the information into a form correctly. <br>
+    Examples of the types of validation that occur include ensuring that:  <br>
+    <br>
+    A required field is completed <br>
+    An email address is valid <br>
+    A number is entered when numerical data is required A password is at least a minimum number of characters <br>
+    <br>
+    Form Quiz Ninja <br>
+    <br>
+    <a href="https://codepen.io/daz4126/pen/ZyoyOz"></a><br>
+    <br>
     Object-Oriented Programming in JavaScript 
+    <br>
+    Object-oriented programming (OOP for short) is a style of programming that involves separating the code into objects <br>
+    that have properties and methods. This approach has the benefit of keeping related pieces of code encapsulated<br>
+    in objects that maintain state throughout the life of the program. The objects can also be reused or easily modified,<br>
+    as required. <br>
+    <br>
+    Object-oriented programming is often used to model representations of objects in the real world. <br>
+    There are three main concepts in OOP: encapsulation, polymorphism and inheritance. <br>
+    <br>
+    Encapsulation <br>
+    The inner workings are kept hidden inside the object and only the essential functionalities are exposed <br>
+    to the end user, such as the “on” button. In OOP, this involves keeping all the programming logic inside an object<br>
+    and making methods available to implement the functionality, without the outside world needing to know how it’s done. <br>
+    <br>
+    Polymorphism <br>
+    Various objects can share the same method, but also have the ability to override shared methods with a more specific implementation. <br>
+    <br>
+    Inheritance <br>
+    We can take an object that already exists and inherit all its properties and methods. We can then improve on its functionality<br>
+    by adding new properties and methods. <br>
+    <br>
+    Classes <br>
+    Many object-oriented languages, such as Java and Ruby, are known as class-based languages. This is because they use a class <br>
+    to define a blueprint for an object. Objects are then created as an instance of that class, and inherit all the properties and methods of the class. <br>
+    <br>
+    constructor function: <br>
+    const Dice = function(sides=6){ this.sides = sides; <br>
+    this.roll = function() {  <br>
+        <br>
+    return Math.floor(this.sides * Math.random() + 1) }  <br>
+    <br>
+    } <br>
+    <br>
+    Quiz object: <br>
+    <br>
+    const quiz = [ <br>
+    <br>
+    { name : "Superman",realName: "Clark Kent" }, <br>
     
-    Object-oriented programming (OOP for short) is a style of programming that involves separating the code into objects that have properties and methods. This approach has the benefit of keeping related pieces of code encapsulated in objects that maintain state throughout the life of the program. The objects can also be reused or easily modified, as required. 
+    { name : "Wonder Woman",realName: "Diana Prince" }, <br>
     
-    Object-oriented programming is often used to model representations of objects in the real world. There are three main concepts in OOP: encapsulation, polymorphism and inheritance. 
+    { name : "Batman",realName: "Bruce Wayne" }, <br>
     
-    Encapsulation 
+    { name : "The Hulk",realName: "Bruce Banner" }, <br>
     
-    The inner workings are kept hidden inside the object and only the essential functionalities are exposed to the end user, such as the “on” button. In OOP, this involves keeping all the programming logic inside an object and making methods available to implement the functionality, without the outside world needing to know how it’s done. 
+    { name : "Spider-man",realName: "Peter Parker" }, <br>
     
-    Polymorphism 
-    
-    Various objects can share the same method, but also have the ability to override shared methods with a more specific implementation. 
-    
-    Inheritance 
-    
-    We can take an object that already exists and inherit all its properties and methods. We can then improve on its functionality by adding new properties and methods. 
-    
-    Classes 
-    
-    Many object-oriented languages, such as Java and Ruby, are known as class-based languages. This is because they use a class to define a blueprint for an object. Objects are then created as an instance of that class, and inherit all the properties and methods of the class. 
-    
-    constructor function: 
-    
-    const Dice = function(sides=6){ this.sides = sides; 
-    this.roll = function() {  
-    
-    return Math.floor(this.sides * Math.random() + 1) }  
-    
-    } 
-    
-    Quiz object: 
-    
-    const quiz = [ 
-    
-    { name: "Superman",realName: "Clark Kent" }, 
-    
-    { name: "Wonder Woman",realName: "Diana Prince" }, 
-    
-    { name: "Batman",realName: "Bruce Wayne" }, 
-    
-    { name: "The Hulk",realName: "Bruce Banner" }, 
-    
-    { name: "Spider-man",realName: "Peter Parker" }, 
-    
-    { name: "Cyclops",realName: "Scott Summers" } 
-    
-    ]; 
-    
+    { name : "Cyclops",realName: "Scott Summers" } <br>
+    <br>
+    ]; <br>
+    <br>
     This method to take into account that the response from the player comes from clicking on a button rather than submitting a form on the ninja project: 
     
     check(event){ 
