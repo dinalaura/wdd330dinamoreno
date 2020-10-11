@@ -1,11 +1,15 @@
-document.querySelector("div").addEventListener("click", myFunction);
+/* document.querySelector("#uno").addEventListener("click", myFunction);
 
 function myFunction() {
 
-  document.getElementById("uno").innerHTML = "O";
+  document.querySelector("#uno").innerHTML = "O";
 
-  let parrafo = document.createElement('p');
-  parrafo.innerHTML = "O";
+} */
 
-  div.appendChild(p);
+document.querySelector("#uno").addEventListener("click", myFunction);
+
+function myFunction() {
+
+  document.querySelector("#uno").innerHTML = "O";
+
 }
