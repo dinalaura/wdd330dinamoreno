@@ -5,8 +5,10 @@ body{
     background-color: rgb(219, 217, 200);
 }
 h1{
-    font-size: 1.5rem;
-    color: white;
+
+    color: black;
+background-color: white;
+padding: 1em;
 }
 h1, form{
     display: flex;
