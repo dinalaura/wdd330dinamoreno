@@ -1,66 +1,77 @@
-
-body{
+body {
     font-family: sans-serif;
     min-height: 100vh;
     background-color: rgb(219, 217, 200);
 }
-h1{
+
+h1 {
 
     color: black;
-background-color: white;
-padding: 1em;
+    background-color: white;
+    padding: 1em;
 }
-h1, form{
+
+h1,
+form {
     display: flex;
     justify-content: center;
 }
-form button:hover{
+
+form button:hover {
     background: brown;
-    color:white;
+    color: white;
 }
-.todo-container{
+
+.todo-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.todo-list{
+
+.todo-list {
     min-width: 30%;
     list-style: none;
 }
-.todo{
-    margin:0.5rem;
+
+.todo {
+    margin: 0.5rem;
     background: white;
-    color:black;
-    font-size:1.5rem;
-    display:flex;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     transition: all 0.5s ease;
 }
-.todo li{
-    flex:1;
-}
-.trash-btn,
-.complete-btn{
-    background:rgb(231, 129, 129);
-    color:white;
-    border:none;
-    padding:1rem;
-    cursor:pointer;
-    font-size:1rem;
-}
-.complete-btn{
-    background: rgb(31, 192, 31);
-}
-.todo-item{
-padding: 0rem 0.5rem;
-}
-.fa-trash, .fa-check{
-    pointer-events:none;
+
+.todo li {
+    flex: 1;
 }
 
-.completed{
+.trash-btn,
+.complete-btn {
+    background: rgb(231, 129, 129);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.complete-btn {
+    background: rgb(31, 192, 31);
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+    pointer-events: none;
+}
+
+.completed {
     text-decoration: line-through;
     opacity: 0.5;
 }
-
