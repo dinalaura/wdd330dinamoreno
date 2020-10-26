@@ -1,0 +1,102 @@
+#maincontainer {
+  background-color: rgb(236, 230, 222);
+  max-width: 40em;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
+}
+
+header {
+  background-image: linear-gradient(180deg, rgb(81, 192, 219), rgb(149, 149, 221));
+  border-radius: 15px 15px 0px 0px;
+  font-size: 1.5em;
+  color: white;
+}
+
+h1,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input {
+  padding: .5em;
+  font-size: 1em;
+  border: none;
+  background: white;
+}
+
+form button {
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  color: gray;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  background: white;
+  font-size: 1em;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 1s ease;
+}
+
+.filter {
+  padding: 1rem;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.trash-btn,
+.complete-btn {
+  background: rgb(223, 84, 84);
+  color: white;
+  border: none;
+  padding: 1em;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.complete-btn {
+  background: rgb(101, 101, 230);
+}
+
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+.fa-check-circle,
+.fa-times-circle {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.input::placeholder {
+  color: black;
+  opacity: .5;
+}
