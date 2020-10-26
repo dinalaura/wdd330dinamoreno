@@ -49,45 +49,45 @@ Literal notation is recommended. <br>
 You can access the properties of an object using the dot notation. <br>
 That will return the value of that property: <br>
 <br>
-superman.name << 'Superman' <br>
+superman.name &lt;&lt; 'Superman' <br>
 You can also access an object’s properties using bracket notation using quote marks: <br>
-superman['name'] << 'Superman' <br>
+superman['name'] &lt;&lt; 'Superman' <br>
 If you try to access a property that doesn’t exist, undefined will be returned: <br>
-superman.city << undefined <br>
+superman.city &lt;&lt; undefined <br>
 <br>
 To call an object’s method use dot or bracket notation. Calling a method is the same as invoking a function,<br>
 so parentheses need to be placed after the method name:  <br>
 <br>
 superman.fly() <br>
-<< 'Up, up and away!'  <br>
+&lt;&lt; 'Up, up and away!'  <br>
 <br>
 superman['fly']() <br>
-<< 'Up, up and away!' <br>
+&lt;&lt; 'Up, up and away!' <br>
 <br>
 The in operator can be used to check whether an object has a particular property: <br>
 'city' in superman;  <br>
-<< false <br>
+&lt;&lt; false <br>
 Check to see if the property or method doesn’t return undefined: <br>
 superman.city !== undefined; <br>
- << false <br>
+&lt;&lt; false <br>
  <br>
 The hasOwnProperty() can be used to check whether an object has a property that is its own, <br>
 rather than one that has been inherited from another object: <br>
 superman.hasOwnProperty('city');  <br>
-<< false  <br>
+&lt;&lt; false  <br>
 superman.hasOwnProperty('name');  <br>
-<< true <br>
+&lt;&lt; true <br>
 <br>
 We can loop through all an object’s properties and methods by using a for in loop: <br>
 for(const key in superman) { console.log(key + ": " + superman[key]); }  <br>
-<<  "name: Superman"  <br>
-<<  "real name: Clark Kent"<br>  
-<<  "height: 75"  <br>
-<<  "weight: 235"  <br>
-<<  "hero: true"  <br>
-<<  "villain: false"  <br>
-<<  "allies: Batman,Supergirl,Superboy"  <br>
-<<  "fly: function (){  <br>
+&lt;&lt;  "name: Superman"  <br>
+&lt;&lt;  "real name: Clark Kent"<br>  
+&lt;&lt;  "height: 75"  <br>
+&lt;&lt;  "weight: 235"  <br>
+&lt;&lt;  "hero: true"  <br>
+&lt;&lt;  "villain: false"  <br>
+&lt;&lt;  "allies: Batman,Supergirl,Superboy"  <br>
+&lt;&lt;  "fly: function (){  <br>
 console.log(\"Up, up and away!\"); }" <br>
 <br>
 
@@ -96,7 +96,7 @@ We can then iterate over this array to access all the keys of an object:  <br>
 for(const key of Object.keys(superman)) {  <br>
 console.log(key); <br>
 } <br>
-<< name  <br>
+&lt;&lt; name  <br>
 real  <br>
 name <br>
 height <br>
@@ -113,15 +113,15 @@ These key-value pairs are returned in arrays.<br>
 New properties and methods can be added to objects at any time in a program. <br>
 This is done by simply assigning a value to the new property: <br>
 superman.city = 'Metropolis'; <br>
- << 'Metropolis' <br>
+&lt;&lt; 'Metropolis' <br>
 Properties don’t always appear in the order they were entered. <br>
 <br>
 Changing the value of an object’s properties, we can change the value of the "real name" property like this: <br>
 superman['real name'] = 'Kal-El';  <br>
-<< 'Kal-El' <br>
+&lt;&lt; 'Kal-El' <br>
 Also, any property can be removed from an object using the delete operator: <br>
 delete superman.fly  <br>
-<< true <br>
+&lt;&lt; true <br>
 <br>
 It’s even possible for an object to contain other objects. These are known as nested objects. <br>
 const jla = { <br>
@@ -135,12 +135,12 @@ wonderWoman: { realName: 'Diana Prince" },<br>
 The values in nested objects can be accessed by referencing each property name <br>
 in order using either dot or bracket notation: <br>
 jla.wonderWoman.realName  <br>
-<< "Diana Prince"  <br>
+&lt;&lt; "Diana Prince"  <br>
 jla['flash']['realName']<br> 
- << "Barry Allen" <br>
+&lt;&lt; "Barry Allen" <br>
 Accessing with mix notation:<br> 
 jla.aquaman['realName'] <br>
- << "Arthur Curry" <br>
+&lt;&lt; "Arthur Curry" <br>
  <br>
 An object literal can be passed as a parameter to a function. This is useful when there are many parameters: <br>
 function greet({greeting,name,age}) { <br>
@@ -213,14 +213,14 @@ The document.querySelector() method allows you to use CSS notation to find <br>
 the first element in the document that matches a CSS selector provided as an argument. <br>
 If no elements match, it will return null. <br>
 the following could be used instead of document.getElementById(): <br>
-document.querySelector('#bats'); << < li class="vigilante hero"  <br>
-➥ id="bats">Batman</ li > <br>
+document.querySelector('#bats'); &lt;&lt; &lt; li class="vigilante hero"  <br>
+➥ id="bats">Batman&lt;/ li > <br>
 <br>
 The setAttribute can change the value of an element’s attributes. <br>
 It takes two arguments: the attribute that you wish to change, <br>
 and the new value of that attribute. <br>
-wonderWoman.setAttribute('class', 'villain'); << undefined  <br>
-wonderWoman.getAttribute('class'); << "villain" <br>
+wonderWoman.setAttribute('class', 'villain'); &lt;&lt; undefined  <br>
+wonderWoman.getAttribute('class'); &lt;&lt; "villain" <br>
 <br>
 <br>
 Events<br> 
