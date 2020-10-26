@@ -1,77 +1,85 @@
-body {
-    font-family: sans-serif;
-    min-height: 100vh;
-    background-color: rgb(219, 217, 200);
-}
-
-h1 {
-
-    color: black;
-    background-color: white;
-    padding: 1em;
-}
-
-h1,
-form {
-    display: flex;
-    justify-content: center;
-}
-
-form button:hover {
-    background: brown;
-    color: white;
-}
-
-.todo-container {
+#maincontainer{
+    background-color: burlywood;
+  }
+  h1{
+    background-color: bisque;
+  }
+  
+  h1,
+  form {
+    min-height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.todo-list {
+  }
+  form input,
+  form button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+  }
+  form button {
+    color: rgba(56, 56, 197, 0.699);
+    background: #f7fffe;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  form button:hover {
+    background: gray;
+    color: white;
+  }
+  .todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .todo-list {
     min-width: 30%;
     list-style: none;
-}
-
-.todo {
+  }
+  
+  .todo {
     margin: 0.5rem;
     background: white;
-    color: black;
     font-size: 1.5rem;
+    color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: all 0.5s ease;
-}
-
-.todo li {
+    transition: all 1s ease;
+  }
+  .filter {
+    padding: 1rem;
+  }
+  .todo li {
     flex: 1;
-}
-
-.trash-btn,
-.complete-btn {
-    background: rgb(231, 129, 129);
+  }
+  
+  .trash-btn,
+  .complete-btn {
+    background: rgb(223, 84, 84);
     color: white;
     border: none;
-    padding: 1rem;
+    padding: 1em;
     cursor: pointer;
-    font-size: 1rem;
-}
-
-.complete-btn {
-    background: rgb(31, 192, 31);
-}
-
-.todo-item {
+    font-size: 1em;
+  }
+  .complete-btn {
+    background: rgb(101, 101, 230);
+  }
+  .todo-item {
     padding: 0rem 0.5rem;
-}
-
-.fa-trash,
-.fa-check {
+  }
+  
+  .fa-check-circle,
+  .fa-times-circle {
     pointer-events: none;
-}
-
-.completed {
+  }
+  
+  .completed {
     text-decoration: line-through;
     opacity: 0.5;
-}
+  }
+  
