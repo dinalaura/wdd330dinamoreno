@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,277 +8,287 @@
     <title>W03 Notes WDD 330</title>
     <link rel="stylesheet" href="../css/main.css">
 </head>
+
 <body>
     <h1>WDD 330: Portfolio</h1>
     <h2>W03 Notes from JavaScript: Novice to Ninja</h2>
     <p>
-<h3>Objects</h3> <br>
-<br>
-JavaScript has six primitive data types: <br>
-<br>
-Strings, numbers, booleans, symbols, undefined, and null or an object. <br>
-An object in JavaScript is a self-contained set of related values and functions. <br>
-If a property’s value is a function, it is known as a method.  <br>
-<br>
-<h3>Example of an object literal:</h3> <br>
-<br>
-const superman = { <br>
-name: 'Superman', <br>
-'real name': 'Clark Kent', <br>
-height: 75, <br>
-weight: 235, <br>
-hero: true, <br>
-villain: false, <br>
-allies: ['Batman','Supergirl','Superboy'], fly() {  <br>
-    <br>
-return 'Up, up and away!'; }  <br>
-<br>
-}; <br>
-<br>
-Each property is a key-value pair, separated by commas.  <br>
-<br>
-All objects are mutable, meaning that its properties and methods can be changed or removed,<br>
- and new properties and methods can be added to the object, even if it was declared using const. <br>
- <br>
-To create an object literal, simply enter a pair of curly braces.  <br>
-Empty object: <br>
-const spiderman = {};<br> 
-Object using a constructor function: <br>
-const spiderman = new Object(); <br>
-Literal notation is recommended. <br>
-<br>
-You can access the properties of an object using the dot notation. <br>
-That will return the value of that property: <br>
-<br>
-superman.name &lt;&lt; 'Superman' <br>
-You can also access an object’s properties using bracket notation using quote marks: <br>
-superman['name'] &lt;&lt; 'Superman' <br>
-If you try to access a property that doesn’t exist, undefined will be returned: <br>
-superman.city &lt;&lt; undefined <br>
-<br>
-To call an object’s method use dot or bracket notation. Calling a method is the same as invoking a function,<br>
-so parentheses need to be placed after the method name:  <br>
-<br>
-superman.fly() <br>
-&lt;&lt; 'Up, up and away!'  <br>
-<br>
-superman['fly']() <br>
-&lt;&lt; 'Up, up and away!' <br>
-<br>
-The in operator can be used to check whether an object has a particular property: <br>
-'city' in superman;  <br>
-&lt;&lt; false <br>
-Check to see if the property or method doesn’t return undefined: <br>
-superman.city !== undefined; <br>
-&lt;&lt; false <br>
- <br>
-The hasOwnProperty() can be used to check whether an object has a property that is its own, <br>
-rather than one that has been inherited from another object: <br>
-superman.hasOwnProperty('city');  <br>
-&lt;&lt; false  <br>
-superman.hasOwnProperty('name');  <br>
-&lt;&lt; true <br>
-<br>
-We can loop through all an object’s properties and methods by using a for in loop: <br>
-for(const key in superman) { console.log(key + ": " + superman[key]); }  <br>
-&lt;&lt;  "name: Superman"  <br>
-&lt;&lt;  "real name: Clark Kent"<br>  
-&lt;&lt;  "height: 75"  <br>
-&lt;&lt;  "weight: 235"  <br>
-&lt;&lt;  "hero: true"  <br>
-&lt;&lt;  "villain: false"  <br>
-&lt;&lt;  "allies: Batman,Supergirl,Superboy"  <br>
-&lt;&lt;  "fly: function (){  <br>
-console.log(\"Up, up and away!\"); }" <br>
-<br>
+        <h3>Objects</h3> <br>
+        <br>
+        <p>JavaScript has six primitive data types: <br>
+            <br>
+            Strings, numbers, booleans, symbols, undefined, and null or an object. <br>
+            An object in JavaScript is a self-contained set of related values and functions. <br>
+            If a property’s value is a function, it is known as a method. <br>
+            <br>
+            Example of an object literal: <br>
+            <br>
+            const superman = { <br>
+            name: 'Superman', <br>
+            'real name': 'Clark Kent', <br>
+            height: 75, <br>
+            weight: 235, <br>
+            hero: true, <br>
+            villain: false, <br>
+            allies: ['Batman','Supergirl','Superboy'], fly() { <br>
+            <br>
+            return 'Up, up and away!'; } <br>
+            <br>
+            }; <br>
+            <br>
+            Each property is a key-value pair, separated by commas. <br>
+            <br>
+            All objects are mutable, meaning that its properties and methods can be changed or removed,<br>
+            and new properties and methods can be added to the object, even if it was declared using const. <br>
+            <br>
+            To create an object literal, simply enter a pair of curly braces. <br>
+            Empty object: <br>
+            const spiderman = {};<br>
+            Object using a constructor function: <br>
+            const spiderman = new Object(); <br>
+            Literal notation is recommended. <br>
+            <br>
+            You can access the properties of an object using the dot notation. <br>
+            That will return the value of that property: <br>
+            <br>
+            superman.name &lt;&lt; 'Superman' <br>
+            You can also access an object’s properties using bracket notation using quote marks: <br>
+            superman['name'] &lt;&lt; 'Superman' <br>
+            If you try to access a property that doesn’t exist, undefined will be returned: <br>
+            superman.city &lt;&lt; undefined <br>
+            <br>
+            To call an object’s method use dot or bracket notation. Calling a method is the same as invoking a
+            function,<br>
+            so parentheses need to be placed after the method name: <br>
+            <br>
+            superman.fly() <br>
+            &lt;&lt; 'Up, up and away!' <br>
+            <br>
+            superman['fly']() <br>
+            &lt;&lt; 'Up, up and away!' <br>
+            <br>
+            The in operator can be used to check whether an object has a particular property: <br>
+            'city' in superman; <br>
+            &lt;&lt; false <br>
+            Check to see if the property or method doesn’t return undefined: <br>
+            superman.city !== undefined; <br>
+            &lt;&lt; false <br>
+            <br>
+            The hasOwnProperty() can be used to check whether an object has a property that is its own, <br>
+            rather than one that has been inherited from another object: <br>
+            superman.hasOwnProperty('city'); <br>
+            &lt;&lt; false <br>
+            superman.hasOwnProperty('name'); <br>
+            &lt;&lt; true <br>
+            <br>
+            We can loop through all an object’s properties and methods by using a for in loop: <br>
+            for(const key in superman) { console.log(key + ": " + superman[key]); } <br>
+            &lt;&lt; "name: Superman" <br>
+            &lt;&lt; "real name: Clark Kent"<br>
+            &lt;&lt; "height: 75" <br>
+            &lt;&lt; "weight: 235" <br>
+            &lt;&lt; "hero: true" <br>
+            &lt;&lt; "villain: false" <br>
+            &lt;&lt; "allies: Batman,Supergirl,Superboy" <br>
+            &lt;&lt; "fly: function (){ <br>
+            console.log(\"Up, up and away!\"); }" <br>
+            <br>
 
-The Object.keys() method will return an array of all the keys of any object that is provided as an argument. <br>
-We can then iterate over this array to access all the keys of an object:  <br>
-for(const key of Object.keys(superman)) {  <br>
-console.log(key); <br>
-} <br>
-&lt;&lt; name  <br>
-real  <br>
-name <br>
-height <br>
-weight <br>
-hero <br>
-villain <br>
-allies <br>
-fly <br>
-<br>
-ES2017 also adds some the Object.values() that works in the same way but returns an array of all the object’s value.<br>
-Object.entries() is also part of ES2017 and returns an array of key-value pairs. <br>
-These key-value pairs are returned in arrays.<br> 
-<br>
-New properties and methods can be added to objects at any time in a program. <br>
-This is done by simply assigning a value to the new property: <br>
-superman.city = 'Metropolis'; <br>
-&lt;&lt; 'Metropolis' <br>
-Properties don’t always appear in the order they were entered. <br>
-<br>
-Changing the value of an object’s properties, we can change the value of the "real name" property like this: <br>
-superman['real name'] = 'Kal-El';  <br>
-&lt;&lt; 'Kal-El' <br>
-Also, any property can be removed from an object using the delete operator: <br>
-delete superman.fly  <br>
-&lt;&lt; true <br>
-<br>
-It’s even possible for an object to contain other objects. These are known as nested objects. <br>
-const jla = { <br>
-superman: { realName: 'Clark Kent' }, <br>
-batman: { realName: 'Bruce Wayne' }, <br>
-wonderWoman: { realName: 'Diana Prince" },<br>
- flash: { realName: 'Barry Allen' }, <br>
- aquaman: { realName: 'Arthur Curry' }, <br>
-} <br>
-<br>
-The values in nested objects can be accessed by referencing each property name <br>
-in order using either dot or bracket notation: <br>
-jla.wonderWoman.realName  <br>
-&lt;&lt; "Diana Prince"  <br>
-jla['flash']['realName']<br> 
-&lt;&lt; "Barry Allen" <br>
-Accessing with mix notation:<br> 
-jla.aquaman['realName'] <br>
-&lt;&lt; "Arthur Curry" <br>
- <br>
-An object literal can be passed as a parameter to a function. This is useful when there are many parameters: <br>
-function greet({greeting,name,age}) { <br>
-return `${greeting}! My name is ${name} and I am ${age}  <br>
-➥ years old.`; } <br>
-<br>
-This:<br>  
-The keyword this refers to the object that it is within. <br>
-It can be used inside methods to gain access to the object’s properties. <br>
-There six different ways where this can take on new values. <br>
-They are: <br>
-    this in global context <br>
-    this in object construction<br> 
-    this in an object method <br>
-    this in a simple function <br>
-    this in an arrow function <br>
-    this in an event listener <br>
-    <br>
-Naming collisions occur when the same variable or function name is used for different purposes<br>
- by code sharing the same scope. A solution to this problem is to use the object literal pattern to <br>
- create a namespace for groups of related functions. This is done by creating an object literal <br>
- that serves as the namespace, then adding any values as properties of that object, and any functions as methods.<br> 
- <br>
- JSON<br>  
-JavaScript Object Notation, or JSON, was invented by Douglas Crockford in 2001.<br>
-It is a lightweight data-storage format. It is often used to exchange information between web services. <br>
-JSON is a string representation of the object literal notation that we have just seen. <br>
-There are, however, a couple of key differences:  <br>
-    Property names must be double-quoted  <br>
-    Permitted values are double-quoted strings, numbers, true, false, null, arrays  <br>
-    and objects  <br>
-    Functions are not permitted values  <br>
-    <br>
-A JSON string representation the Caped Crusader is shown below: <br>
-const batman = '{"name": "Batman","real name": "Bruce <br>
-➥ Wayne","height": 74, "weight": 210, "hero": true, "villain": ➥ false, "allies": ["Robin","Batgirl","Superman"]}' <br>
-<br><br>
-Document Object Model <br>
-The Document Object Model (DOM) allows you to access elements of a web page <br>
-and enable interaction with the page by adding and removing elements, changing the order,<br>
-content and attributes of elements, and even altering how they are styled. <br>
-<br>
-The Document Object Model, or DOM for short, represents an HTML document <br>
-as a network of connected nodes that form a tree-like structure. The DOM treats <br>
-everything on a web page as a node. The HTML tag is the root node, and every <br>
-other part of the document is a child node of this. <br>
-<br>
-The DOM is not actually part of JavaScript because it is language agnostic. <br>
-This means it can be used in any programming language, not just JavaScript. <br>
-We can use JavaScript to access and modify different parts of a web page <br>
-using a special built-in object called document. <br>
-<br>
-The DOM provides several methods that allow us to access any element on a page.<br>
-These objects can then be assigned to a variable and be inspected or modified: <br>
-const body = document.body; <br>
-<br>
-All nodes have a numerical code to signify what type they are. <br>
-These are summmarized in the table below. <br>
-Code Type  <br>
-1  element  <br>
-2  attribute  <br>
-3  text  <br>
-8  comment  <br>
-9  body <br>
-<br>
-The getElementById() method does exactly what it says on the title. <br>
-It returns a reference to the element with a unique id attribute that is given as an argument: <br>
-const h1 = document.getElementById('title'); <br>
-The document.querySelector() method allows you to use CSS notation to find <br>
-the first element in the document that matches a CSS selector provided as an argument. <br>
-If no elements match, it will return null. <br>
-the following could be used instead of document.getElementById(): <br>
-document.querySelector('#bats'); &lt;&lt; &lt; li class="vigilante hero"  <br>
-➥ id="bats">Batman&lt;/ li > <br>
-<br>
-The setAttribute can change the value of an element’s attributes. <br>
-It takes two arguments: the attribute that you wish to change, <br>
-and the new value of that attribute. <br>
-wonderWoman.setAttribute('class', 'villain'); &lt;&lt; undefined  <br>
-wonderWoman.getAttribute('class'); &lt;&lt; "villain" <br>
-<br>
-<br>
-<h3>Events</h3><br> 
-The DOM is an interface that allows you to use JavaScript to interact with a web page. <br>
-Events are another part of the DOM and they are what provides the link between<br>
- the web page and user interactions. Every time a user interacts with a web page, <br>
- such as clicking on a link, pressing a key, or moving a mouse, an event occurs <br>
- that our program can detect and then respond to. <br>
- <br>
-Event listeners are like setting a notification to alert you when something happens. <br>
-Instead of the program having to constantly check to see if an event has occurred, <br>
-the event listener will let it know when the event happens, and the program can then <br>
-respond appropriately. <br>
-<br>
-JavaScript uses a non-blocking approach that uses event listeners to listen out <br>
-for any clicks on the page: <br>
-document.body.addEventListener("click", doSomething); <br>
-<br>
-<br>
-<h3>Example of Code</h3><br>
- In this code the variables are set, and then the program access the DOM <br>
- with query selectors and getting elements by id: <br>
- <br>
-const quiz = [ <br>
+            The Object.keys() method will return an array of all the keys of any object that is provided as an argument.
+            <br>
+            We can then iterate over this array to access all the keys of an object: <br>
+            for(const key of Object.keys(superman)) { <br>
+            console.log(key); <br>
+            } <br>
+            &lt;&lt; name <br>
+            real <br>
+            name <br>
+            height <br>
+            weight <br>
+            hero <br>
+            villain <br>
+            allies <br>
+            fly <br>
+            <br>
+            ES2017 also adds some the Object.values() that works in the same way but returns an array of all the
+            object’s value.<br>
+            Object.entries() is also part of ES2017 and returns an array of key-value pairs. <br>
+            These key-value pairs are returned in arrays.<br>
+            <br>
+            New properties and methods can be added to objects at any time in a program. <br>
+            This is done by simply assigning a value to the new property: <br>
+            superman.city = 'Metropolis'; <br>
+            &lt;&lt; 'Metropolis' <br>
+            Properties don’t always appear in the order they were entered. <br>
+            <br>
+            Changing the value of an object’s properties, we can change the value of the "real name" property like this:
+            <br>
+            superman['real name'] = 'Kal-El'; <br>
+            &lt;&lt; 'Kal-El' <br>
+            Also, any property can be removed from an object using the delete operator: <br>
+            delete superman.fly <br>
+            &lt;&lt; true <br>
+            <br>
+            It’s even possible for an object to contain other objects. These are known as nested objects. <br>
+            const jla = { <br>
+            superman: { realName: 'Clark Kent' }, <br>
+            batman: { realName: 'Bruce Wayne' }, <br>
+            wonderWoman: { realName: 'Diana Prince" },<br>
+            flash: { realName: 'Barry Allen' }, <br>
+            aquaman: { realName: 'Arthur Curry' }, <br>
+            } <br>
+            <br>
+            The values in nested objects can be accessed by referencing each property name <br>
+            in order using either dot or bracket notation: <br>
+            jla.wonderWoman.realName <br>
+            &lt;&lt; "Diana Prince" <br>
+            jla['flash']['realName']<br>
+            &lt;&lt; "Barry Allen" <br>
+            Accessing with mix notation:<br>
+            jla.aquaman['realName'] <br>
+            &lt;&lt; "Arthur Curry" <br>
+            <br>
+            An object literal can be passed as a parameter to a function. This is useful when there are many parameters:
+            <br>
+            function greet({greeting,name,age}) { <br>
+            return `${greeting}! My name is ${name} and I am ${age} <br>
+            ➥ years old.`; } <br>
+            <br>
+            This:<br>
+            The keyword this refers to the object that it is within. <br>
+            It can be used inside methods to gain access to the object’s properties. <br>
+            There six different ways where this can take on new values. <br>
+            They are: <br>
+            this in global context <br>
+            this in object construction<br>
+            this in an object method <br>
+            this in a simple function <br>
+            this in an arrow function <br>
+            this in an event listener <br>
+            <br>
+            Naming collisions occur when the same variable or function name is used for different purposes<br>
+            by code sharing the same scope. A solution to this problem is to use the object literal pattern to <br>
+            create a namespace for groups of related functions. This is done by creating an object literal <br>
+            that serves as the namespace, then adding any values as properties of that object, and any functions as
+            methods.<br>
+            <br>
+            JSON<br>
+            JavaScript Object Notation, or JSON, was invented by Douglas Crockford in 2001.<br>
+            It is a lightweight data-storage format. It is often used to exchange information between web services. <br>
+            JSON is a string representation of the object literal notation that we have just seen. <br>
+            There are, however, a couple of key differences: <br>
+            Property names must be double-quoted <br>
+            Permitted values are double-quoted strings, numbers, true, false, null, arrays <br>
+            and objects <br>
+            Functions are not permitted values <br>
+            <br>
+            A JSON string representation the Caped Crusader is shown below: <br>
+            const batman = '{"name": "Batman","real name": "Bruce <br>
+            ➥ Wayne","height": 74, "weight": 210, "hero": true, "villain": ➥ false, "allies":
+            ["Robin","Batgirl","Superman"]}' <br>
+            <br><br>
+            Document Object Model <br>
+            The Document Object Model (DOM) allows you to access elements of a web page <br>
+            and enable interaction with the page by adding and removing elements, changing the order,<br>
+            content and attributes of elements, and even altering how they are styled. <br>
+            <br>
+            The Document Object Model, or DOM for short, represents an HTML document <br>
+            as a network of connected nodes that form a tree-like structure. The DOM treats <br>
+            everything on a web page as a node. The HTML tag is the root node, and every <br>
+            other part of the document is a child node of this. <br>
+            <br>
+            The DOM is not actually part of JavaScript because it is language agnostic. <br>
+            This means it can be used in any programming language, not just JavaScript. <br>
+            We can use JavaScript to access and modify different parts of a web page <br>
+            using a special built-in object called document. <br>
+            <br>
+            The DOM provides several methods that allow us to access any element on a page.<br>
+            These objects can then be assigned to a variable and be inspected or modified: <br>
+            const body = document.body; <br>
+            <br>
+            All nodes have a numerical code to signify what type they are. <br>
+            These are summmarized in the table below. <br>
+            Code Type <br>
+            1 element <br>
+            2 attribute <br>
+            3 text <br>
+            8 comment <br>
+            9 body <br>
+            <br>
+            The getElementById() method does exactly what it says on the title. <br>
+            It returns a reference to the element with a unique id attribute that is given as an argument: <br>
+            const h1 = document.getElementById('title'); <br>
+            The document.querySelector() method allows you to use CSS notation to find <br>
+            the first element in the document that matches a CSS selector provided as an argument. <br>
+            If no elements match, it will return null. <br>
+            the following could be used instead of document.getElementById(): <br>
+            document.querySelector('#bats'); &lt;&lt; &lt; li class="vigilante hero" <br>
+            ➥ id="bats">Batman&lt;/ li > <br>
+            <br>
+            The setAttribute can change the value of an element’s attributes. <br>
+            It takes two arguments: the attribute that you wish to change, <br>
+            and the new value of that attribute. <br>
+            wonderWoman.setAttribute('class', 'villain'); &lt;&lt; undefined <br>
+            wonderWoman.getAttribute('class'); &lt;&lt; "villain" <br>
+            <br>
+            <br>
+            <h3>Events</h3><br>
+            <p>The DOM is an interface that allows you to use JavaScript to interact with a web page. <br>
+                Events are another part of the DOM and they are what provides the link between<br>
+                the web page and user interactions. Every time a user interacts with a web page, <br>
+                such as clicking on a link, pressing a key, or moving a mouse, an event occurs <br>
+                that our program can detect and then respond to. <br>
+                <br>
+                Event listeners are like setting a notification to alert you when something happens. <br>
+                Instead of the program having to constantly check to see if an event has occurred, <br>
+                the event listener will let it know when the event happens, and the program can then <br>
+                respond appropriately. <br>
+                <br>
+                JavaScript uses a non-blocking approach that uses event listeners to listen out <br>
+                for any clicks on the page: <br>
+                document.body.addEventListener("click", doSomething); <br>
+                <br>
+                <br>
+            </p>
+            <h3>Example of Code</h3>
+           <p> In this code the variables are set, and then the program access the DOM <br>
+            with query selectors and getting elements by id: <br>
+            <br>
+            const quiz = [ <br>
 
-              { name: "Superman",realName: "Clark Kent" }, <br>
+            { name: "Superman",realName: "Clark Kent" }, <br>
 
-              { name: "Wonderwoman",realName: "Dianna Prince" }, <br>
+            { name: "Wonderwoman",realName: "Dianna Prince" }, <br>
 
-              { name: "Batman",realName: "Bruce Wayne" }, <br>
+            { name: "Batman",realName: "Bruce Wayne" }, <br>
 
             ]; <br>
             <br>
-// View Object <br>
-<br>
-const view = { <br>
-  score: document.querySelector('#score strong'), <br>
-  question: document.getElementById('question'), <br>
-  result: document.getElementById('result'), <br>
-  info: document.getElementById('info'), <br>
-  render(target,content,attributes) { <br>
-      for(const key in attributes) { <br>
-        <br>
-        target.setAttribute(key, attributes[key]); <br>
-        <br>
-      } <br>
-      <br>
-      target.innerHTML = content; <br>
-      <br>
-  } <br>
-  <br>
-}; <br>
-<br>
- <a href="https://codepen.io/daz4126/pen/LLdJww">CodePen</a><br>
- <br><br><br><br>
+            // View Object <br>
+            <br>
+            const view = { <br>
+            score: document.querySelector('#score strong'), <br>
+            question: document.getElementById('question'), <br>
+            result: document.getElementById('result'), <br>
+            info: document.getElementById('info'), <br>
+            render(target,content,attributes) { <br>
+            for(const key in attributes) { <br>
+            <br>
+            target.setAttribute(key, attributes[key]); <br>
+            <br>
+            } <br>
+            <br>
+            target.innerHTML = content; <br>
+            <br>
+            } <br>
+            <br>
+            }; <br>
+            <br>
+            <a href="https://codepen.io/daz4126/pen/LLdJww">CodePen</a><br>
+            <br><br><br><br>
 
- 
-</p>
+
+        </p>
 </body>
+
 </html>

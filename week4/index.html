@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,267 +8,295 @@
     <title>W04 Notes WDD 330</title>
     <link rel="stylesheet" href="../css/main.css">
 </head>
+
 <body>
     <h1>WDD 330: Portfolio</h1>
+
     <h2>W04 Notes from JavaScript: Novice to Ninja</h2>
-    <p>
-    Forms <br>
-    Forms are a very common method of interacting with a web page, most of us use forms every<br>
-    day to log in to our favorite sites, forms can be used to interact with a JavaScript program. <br>
-    <br>
-    Forms are made up of a &lt;form > element that contains form controls such as input fields, <br>
+
+  
+       <h3> Forms</h3>
+        <p>Forms are a very common method of interacting with a web page, most of us use forms every<br>
+        day to log in to our favorite sites, forms can be used to interact with a JavaScript program. <br>
+        <br>
+        Forms are made up of a &lt;form > element that contains form controls such as input fields, <br>
         select menus and buttons. These input fields can be populated with information <br>
-        that is processed once the form has been submitted.  <br>
+        that is processed once the form has been submitted. <br>
         <br>
-    Traditionally, when a form was submitted, it would be sent to a server where the information <br>
-    would be processed using a back-end language such as PHP or Ruby. It’s possible, <br>
-    and becoming more and more common, to process the information in a form on the front end<br>
-    before it is sent to the server using JavaScript <br>
-    <br>
-    A Searching Example <br>
-    <br>
-    &lt; !doctype html > <br>
-    &lt; html lang='en'> &lt; head > <br>
-    &lt; meta charset='utf-8'> &lt; title >Search &lt;/ title > &lt;/ head >  <br>
-    <br>
-    &lt; body > <br>
-    &lt; form name='search' action='/search'>  <br>
-    <br>
-    &lt; input name='searchInput'>  <br>
-    <br>
-    &lt; button type='submit'>Search &lt;/ button> &lt;/ form>  <br>
-    <br>
-    &lt; script src='main.js'>&lt;/ script> &lt;/ body> <br>
-    &lt;/ html> <br>
-    <br>
-    <a href="https://codepen.io/Dina-Laura/pen/ExyjgQw">CodePen Example</a><br>
-    <br>
-    Accessing Form Elements <br>
-    <br>
-    The legacy DOM had a useful property called document .forms that returns an HTML collection<br>
-    of all the forms in the document in the order they appear in the markup. <br>
-    <br>
-    Form Events <br>
-    Forms trigger a number of events. <br>
-    The focus event occurs when an element is focused on. In the case of an &lt;input> element, <br>
-    this is when the cursor is placed inside the element (either by clicking or tapping on it <br>
-    or navigating to it using the keyboard). <br>
-    <br>
-    const input = form.elements.searchInput;  <br>
-    <br>
-    input.addEventListener('focus', () => alert('focused'), ➥ false); <br>
-    <br>
-    The blur event occurs when the user moves the focus away from the form element. <br>
-    <br>
-    input.addEventListener('blur', () => alert('blurred'), ➥ false); <br>
-    <br>
-    The change event occurs when the user moves the focus away from the form element after changing it. <br>
-    <br>
-    input.addEventListener('change', () => alert('changed'), ➥ false); <br>
-    <br>
-    Possibly the most important form event is the submit event, occurring when the form is submitted. <br>
-    Usually this will send the content of the form to the server to be processed. <br>
-    <br>
-    Retrieving and Changing Values From a Form <br>
-    Text input element objects have a value property that can be used to retrieve the text inside the field. <br>
-    We can use this to report back what the user has searched for. Edit the search() function to the following: <br>
-    <br>
-    function search(event) { <br>
-    alert (`You Searched for: ${input.value}`); event.preventDefault(); <br>
-    } <br>
-    <br>
-    The placeholder Attribute <br>
-    Similar functionality can be produced in modern browsers using the placeholder attribute in the HTML markup. <br>
-    Simply change the input field to the following in search.html: <br>
-    <br>
-    &lt; input type='text' name='search-box' placeholder='Search ➥ Here' > <br>
-    <br>
-    Form Controls <br>
-    <br>
-    Some common types of form control are: <br>
-    &lt; input > fields, including text, passwords, check boxes, radio buttons, and file uploads  <br>
-    &lt; select > menus for drop-down lists of options <br>
-    &lt; textarea > elements for longer text entry <br>
-    &lt; button > elements for submitting and resetting forms <br>
-    <br>
-    Input Fields <br>
-    Input fields are the most common types of form control, but there are several categories of input field <br>
-    <br>
-    Text Input Fields <br>
-    The default type of input field is text, which is used for entering a short piece of text, such as a username. <br>
-    <br>
-    Password Input Fields <br>
-    Input type='password' is used to enter passwords or secret information. <br>
-    <br>
-    Checkbox Input Fields <br>
-    Check boxes are created using input fields with type='checkbox'. They are used to select different <br>
-    options that can be checked (true) or left unchecked (false). The user can select more than one checkbox from a list. <br>
-    <br>
-    Radio Button Input Fields <br>
-    Radio buttons are created using input fields with type='radio'. Like checkboxes they allow users to check an option as true, <br>
-    but they provide an exclusive choice of options, so only one option can be selected. <br>
-    <br>
-    Hidden Input Fields <br>
-    Hidden fields can be created using input fields with type='hidden'. These are not displayed by the browser, <br>
-    but have a value attribute that can contain information that is submitted with the form. <br>
-    <br>
-    File Input Fields <br>
-    A file input field can be created using input fields with type='file'. These are used to upload files, <br>
-    and most browsers will provide a browse button or similar that lets users select a file from their file system. <br>
-    <br>
-    Form Validation <br>
-    Form validation is the process of checking whether a user has entered the information into a form correctly. <br>
-    Examples of the types of validation that occur include ensuring that:  <br>
-    <br>
-    A required field is completed <br>
-    An email address is valid <br>
-    A number is entered when numerical data is required A password is at least a minimum number of characters <br>
-    <br>
-    Form Quiz Ninja <br>
-    <br>
-    <a href="https://codepen.io/daz4126/pen/ZyoyOz">CodePen Example</a><br>
-    <br>
-    Object-Oriented Programming in JavaScript 
-    <br>
-    Object-oriented programming (OOP for short) is a style of programming that involves separating the code into objects <br>
-    that have properties and methods. This approach has the benefit of keeping related pieces of code encapsulated<br>
-    in objects that maintain state throughout the life of the program. The objects can also be reused or easily modified,<br>
-    as required. <br>
-    <br>
-    Object-oriented programming is often used to model representations of objects in the real world. <br>
-    There are three main concepts in OOP: encapsulation, polymorphism and inheritance. <br>
-    <br>
-    Encapsulation <br>
-    The inner workings are kept hidden inside the object and only the essential functionalities are exposed <br>
-    to the end user, such as the “on” button. In OOP, this involves keeping all the programming logic inside an object<br>
-    and making methods available to implement the functionality, without the outside world needing to know how it’s done. <br>
-    <br>
-    Polymorphism <br>
-    Various objects can share the same method, but also have the ability to override shared methods with a more specific implementation. <br>
-    <br>
-    Inheritance <br>
-    We can take an object that already exists and inherit all its properties and methods. We can then improve on its functionality<br>
-    by adding new properties and methods. <br>
-    <br>
-    Classes <br>
-    Many object-oriented languages, such as Java and Ruby, are known as class-based languages. This is because they use a class <br>
-    to define a blueprint for an object. Objects are then created as an instance of that class, and inherit all the properties and methods of the class. <br>
-    <br>
-    constructor function: <br>
-    const Dice = function(sides=6){ this.sides = sides; <br>
-    this.roll = function() {  <br>
+        Traditionally, when a form was submitted, it would be sent to a server where the information <br>
+        would be processed using a back-end language such as PHP or Ruby. It’s possible, <br>
+        and becoming more and more common, to process the information in a form on the front end<br>
+        before it is sent to the server using JavaScript <br>
         <br>
-    return Math.floor(this.sides * Math.random() + 1) }  <br>
-    <br>
-    } <br>
-    <br>
-    Quiz object: <br>
-    <br>
-    const quiz = [ <br>
-    <br>
-    { name : "Superman",realName: "Clark Kent" }, <br>
-    
-    { name : "Wonder Woman",realName: "Diana Prince" }, <br>
-    
-    { name : "Batman",realName: "Bruce Wayne" }, <br>
-    
-    { name : "The Hulk",realName: "Bruce Banner" }, <br>
-    
-    { name : "Spider-man",realName: "Peter Parker" }, <br>
-    
-    { name : "Cyclops",realName: "Scott Summers" } <br>
-    <br>
-    ]; <br>
-    <br>
-    This method to take into account that the response from the player comes from clicking on a button <br>
-    rather than submitting a form on the ninja project: <br>
-    <br>
-    check(event){ <br>
+        </p>    
+        <h3>A Searching Example</h3>
         <br>
-    console. log('check(event) invoked'); <br>
-    <br>
-    const response = event.target.textContent; <br>
-    <br>
-    const answer = this.question.realName; <br>
-    <br>
-    if(response === answer){ <br>
+        <p>&lt; !doctype html > <br>
+        &lt; html lang='en'> &lt; head > <br>
+        &lt; meta charset='utf-8'> &lt; title >Search &lt;/ title > &lt;/ head > <br>
         <br>
-    view.render(view.result,'Correct!',{'class':'correct'}); <br>
-    <br>
-    this.score++; <br>
-    <br>
-    view.render(view.score,this.score); <br>
-    <br>
-    } else { <br>
+        &lt; body > <br>
+        &lt; form name='search' action='/search'> <br>
         <br>
-    view.render(view.result,`Wrong! The correct answer was ${answer}`,{'class':'wrong'}); <br>
-    <br>
-    } <br>
-    <br>
-    this.ask();<br> 
-    <br>
-    } <br>
-    <br>
-    <a href="https://codepen.io/daz4126/pen/Kqojgj">CodePen Example</a><br>
-    <br>
-    <h3>Modular JavaScript</h3> <br>
-    <br>
-    A module is a self-contained piece of code that provides functions and methods <br>
-    that can then be used in other files and by other modules. The code in a module<br>
-    should have a single purpose, and group together functions with distinct functionality. <br>
-     <br>
-    Keeping code modular helps to make it more loosely coupled and interchangeable, <br>
-    meaning you can easily swap one module for another without affecting other parts of a project. <br>
-    Modules also allow a public API to be exposed, while keeping the implementation hidden away inside the module. <br>
-    <br>
-    <h3>Coupling </h3><br>
-    The coupling of code refers to how dependent certain elements or modules of code are on each other.<br>
-    Two pieces of code are said to be tightly coupled if one relies on the other to run. <br>
-    It is considered good design to keep code as loosely coupled as possible <br>
-    as this allows for the most flexibility in developing systems of code,<br>
-    as different modules can be used independently and in a variety of different applications, <br>
-    rather than being restricted to a single use-case. <br>
-    <br>
-    ES6 Modules <br>
-    <br>
-    For a long time, JavaScript didn’t support modules, but native support for them was finally added in ES6. <br>
-    They allow you to keep parts of code in self-contained files.  <br>
-    <br>
-    There are a few important points about modules that are worth keeping in mind:  <br>
-    <br>
-    All code in modules is always in strict mode without the need for 'use strict' and there is no way to opt out of this. <br>
-    A module has its own global scope, so any variables created in the top-level of a module can only be accessed within that module. <br>
-    The value of this in the top level of a module is undefined, rather than the global object. <br>
-    You can’t use HTML-style comments in modules <br>
-    <br>
-    A ES6 module file is just a normal JavaScript file, but uses the keyword export to specify <br>
-    any values or functions that are to be made available from the module.
-    a very simple Pi module would have the following code saved in a file called pi.js: <br>
-    <br>
-    export const PI = 3.1415926; <br>
-    <br>
-    This would then be imported into your main JavaScript file, main.js using the following code: <br>
-    <br>
-    import { PI } from './pi.js'; <br>
-    <br>
-    This would then allow you to use the variable PI inside the main.js file. <br>
-    <br>
-    If there are lots of values and functions that need to be imported, <br>
-    then everything in a module file can be imported using the wildcard symbol * along with a namespace<br>
-    for the imported values and functions using the following notation: <br>
-    <br>
-    import * as stats from './stats.js'; <br>
-    <br>
-    This will then import all the functions from the stats.js module and they’ll be given a namespace of stats.<br>
-    So, the mean function could be used as follows: <br>
-    <br>
-    stats.mean([2,6,10]); <br>
-    <br>
-    Node.js Modules <br>
-    <br>
-    Node.js had already implemented modules before they were introduced in ES6,<br>
-     and used a slightly different notation called Common JS modules <br>
-     it is expected that Node.js will support ES6 modules in some way in the future. <br>   
-</p>
+        &lt; input name='searchInput'> <br>
+        <br>
+        &lt; button type='submit'>Search &lt;/ button> &lt;/ form> <br>
+        <br>
+        &lt; script src='main.js'>&lt;/ script> &lt;/ body> <br>
+        &lt;/ html> <br>
+        <br>
+        <a href="https://codepen.io/Dina-Laura/pen/ExyjgQw">CodePen Example</a><br>
+        <br>
+        </p>
+        <h3>Accessing Form Elements</h3>
+        <br>
+       <p>The legacy DOM had a useful property called document .forms that returns an HTML collection<br>
+        of all the forms in the document in the order they appear in the markup. <br>
+        <br>
+        Form Events <br>
+        Forms trigger a number of events. <br>
+        The focus event occurs when an element is focused on. In the case of an &lt;input> element, <br>
+        this is when the cursor is placed inside the element (either by clicking or tapping on it <br>
+        or navigating to it using the keyboard). <br>
+        <br>
+        const input = form.elements.searchInput; <br>
+        <br>
+        input.addEventListener('focus', () => alert('focused'), ➥ false); <br>
+        <br>
+        The blur event occurs when the user moves the focus away from the form element. <br>
+        <br>
+        input.addEventListener('blur', () => alert('blurred'), ➥ false); <br>
+        <br>
+        The change event occurs when the user moves the focus away from the form element after changing it. <br>
+        <br>
+        input.addEventListener('change', () => alert('changed'), ➥ false); <br>
+        <br>
+        Possibly the most important form event is the submit event, occurring when the form is submitted. <br>
+        Usually this will send the content of the form to the server to be processed. <br>
+        <br>
+        Retrieving and Changing Values From a Form <br>
+        Text input element objects have a value property that can be used to retrieve the text inside the field. <br>
+        We can use this to report back what the user has searched for. Edit the search() function to the following: <br>
+        <br>
+        function search(event) { <br>
+        alert (`You Searched for: ${input.value}`); event.preventDefault(); <br>
+        } <br>
+        <br>
+        The placeholder Attribute <br>
+        Similar functionality can be produced in modern browsers using the placeholder attribute in the HTML markup.
+        <br>
+        Simply change the input field to the following in search.html: <br>
+        <br>
+        &lt; input type='text' name='search-box' placeholder='Search ➥ Here' > <br>
+        <br>
+        Form Controls <br>
+        <br>
+        Some common types of form control are: <br>
+        &lt; input > fields, including text, passwords, check boxes, radio buttons, and file uploads <br>
+        &lt; select > menus for drop-down lists of options <br>
+        &lt; textarea > elements for longer text entry <br>
+        &lt; button > elements for submitting and resetting forms <br>
+        <br>
+        Input Fields <br>
+        Input fields are the most common types of form control, but there are several categories of input field <br>
+        <br>
+        Text Input Fields <br>
+        The default type of input field is text, which is used for entering a short piece of text, such as a username.
+        <br>
+        <br>
+        Password Input Fields <br>
+        Input type='password' is used to enter passwords or secret information. <br>
+        <br>
+        Checkbox Input Fields <br>
+        Check boxes are created using input fields with type='checkbox'. They are used to select different <br>
+        options that can be checked (true) or left unchecked (false). The user can select more than one checkbox from a
+        list. <br>
+        <br>
+        Radio Button Input Fields <br>
+        Radio buttons are created using input fields with type='radio'. Like checkboxes they allow users to check an
+        option as true, <br>
+        but they provide an exclusive choice of options, so only one option can be selected. <br>
+        <br>
+        Hidden Input Fields <br>
+        Hidden fields can be created using input fields with type='hidden'. These are not displayed by the browser, <br>
+        but have a value attribute that can contain information that is submitted with the form. <br>
+        <br>
+        File Input Fields <br>
+        A file input field can be created using input fields with type='file'. These are used to upload files, <br>
+        and most browsers will provide a browse button or similar that lets users select a file from their file system.
+        <br>
+        <br>
+        Form Validation <br>
+        Form validation is the process of checking whether a user has entered the information into a form correctly.
+        <br>
+        Examples of the types of validation that occur include ensuring that: <br>
+        <br>
+        A required field is completed <br>
+        An email address is valid <br>
+        A number is entered when numerical data is required A password is at least a minimum number of characters <br>
+        <br>
+        Form Quiz Ninja <br>
+        <br>
+        <a href="https://codepen.io/daz4126/pen/ZyoyOz">CodePen Example</a><br>
+        <br>
+        Object-Oriented Programming in JavaScript
+        <br>
+        Object-oriented programming (OOP for short) is a style of programming that involves separating the code into
+        objects <br>
+        that have properties and methods. This approach has the benefit of keeping related pieces of code
+        encapsulated<br>
+        in objects that maintain state throughout the life of the program. The objects can also be reused or easily
+        modified,<br>
+        as required. <br>
+        <br>
+        Object-oriented programming is often used to model representations of objects in the real world. <br>
+        There are three main concepts in OOP: encapsulation, polymorphism and inheritance. <br>
+        <br>
+        Encapsulation <br>
+        The inner workings are kept hidden inside the object and only the essential functionalities are exposed <br>
+        to the end user, such as the “on” button. In OOP, this involves keeping all the programming logic inside an
+        object<br>
+        and making methods available to implement the functionality, without the outside world needing to know how it’s
+        done. <br>
+        <br>
+        Polymorphism <br>
+        Various objects can share the same method, but also have the ability to override shared methods with a more
+        specific implementation. <br>
+        <br>
+        Inheritance <br>
+        We can take an object that already exists and inherit all its properties and methods. We can then improve on its
+        functionality<br>
+        by adding new properties and methods. <br>
+        <br>
+        Classes <br>
+        Many object-oriented languages, such as Java and Ruby, are known as class-based languages. This is because they
+        use a class <br>
+        to define a blueprint for an object. Objects are then created as an instance of that class, and inherit all the
+        properties and methods of the class. <br>
+        <br>
+        constructor function: <br>
+        const Dice = function(sides=6){ this.sides = sides; <br>
+        this.roll = function() { <br>
+        <br>
+        return Math.floor(this.sides * Math.random() + 1) } <br>
+        <br>
+        } <br>
+        <br>
+        Quiz object: <br>
+        <br>
+        const quiz = [ <br>
+        <br>
+        { name : "Superman",realName: "Clark Kent" }, <br>
+
+        { name : "Wonder Woman",realName: "Diana Prince" }, <br>
+
+        { name : "Batman",realName: "Bruce Wayne" }, <br>
+
+        { name : "The Hulk",realName: "Bruce Banner" }, <br>
+
+        { name : "Spider-man",realName: "Peter Parker" }, <br>
+
+        { name : "Cyclops",realName: "Scott Summers" } <br>
+        <br>
+        ]; <br>
+        <br>
+        This method to take into account that the response from the player comes from clicking on a button <br>
+        rather than submitting a form on the ninja project: <br>
+        <br>
+        check(event){ <br>
+        <br>
+        console. log('check(event) invoked'); <br>
+        <br>
+        const response = event.target.textContent; <br>
+        <br>
+        const answer = this.question.realName; <br>
+        <br>
+        if(response === answer){ <br>
+        <br>
+        view.render(view.result,'Correct!',{'class':'correct'}); <br>
+        <br>
+        this.score++; <br>
+        <br>
+        view.render(view.score,this.score); <br>
+        <br>
+        } else { <br>
+        <br>
+        view.render(view.result,`Wrong! The correct answer was ${answer}`,{'class':'wrong'}); <br>
+        <br>
+        } <br>
+        <br>
+        this.ask();<br>
+        <br>
+        } <br>
+        <br>
+        <a href="https://codepen.io/daz4126/pen/Kqojgj">CodePen Example</a><br>
+        <br></p>
+        <h3>Modular JavaScript</h3> <br>
+        <br>
+        <p>A module is a self-contained piece of code that provides functions and methods <br>
+        that can then be used in other files and by other modules. The code in a module<br>
+        should have a single purpose, and group together functions with distinct functionality. <br>
+        <br>
+        Keeping code modular helps to make it more loosely coupled and interchangeable, <br>
+        meaning you can easily swap one module for another without affecting other parts of a project. <br>
+        Modules also allow a public API to be exposed, while keeping the implementation hidden away inside the module.
+        <br>
+        <br></p>
+
+        <h3>Coupling </h3><br>
+        <p>The coupling of code refers to how dependent certain elements or modules of code are on each other.<br>
+        Two pieces of code are said to be tightly coupled if one relies on the other to run. <br>
+        It is considered good design to keep code as loosely coupled as possible <br>
+        as this allows for the most flexibility in developing systems of code,<br>
+        as different modules can be used independently and in a variety of different applications, <br>
+        rather than being restricted to a single use-case. <br>
+        <br></p>
+
+        <h3>ES6 Modules</h3> <br>
+        <br>
+        <p>For a long time, JavaScript didn’t support modules, but native support for them was finally added in ES6.
+            <br>
+            They allow you to keep parts of code in self-contained files. <br>
+            <br>
+            There are a few important points about modules that are worth keeping in mind: <br>
+            <br>
+            All code in modules is always in strict mode without the need for 'use strict' and there is no way to opt
+            out of this. <br>
+            A module has its own global scope, so any variables created in the top-level of a module can only be
+            accessed within that module. <br>
+            The value of this in the top level of a module is undefined, rather than the global object. <br>
+            You can’t use HTML-style comments in modules <br>
+            <br>
+            A ES6 module file is just a normal JavaScript file, but uses the keyword export to specify <br>
+            any values or functions that are to be made available from the module.
+            a very simple Pi module would have the following code saved in a file called pi.js: <br>
+            <br>
+            export const PI = 3.1415926; <br>
+            <br>
+            This would then be imported into your main JavaScript file, main.js using the following code: <br>
+            <br>
+            import { PI } from './pi.js'; <br>
+            <br>
+            This would then allow you to use the variable PI inside the main.js file. <br>
+            <br>
+            If there are lots of values and functions that need to be imported, <br>
+            then everything in a module file can be imported using the wildcard symbol * along with a namespace<br>
+            for the imported values and functions using the following notation: <br>
+            <br>
+            import * as stats from './stats.js'; <br>
+            <br>
+            This will then import all the functions from the stats.js module and they’ll be given a namespace of
+            stats.<br>
+            So, the mean function could be used as follows: <br>
+            <br>
+            stats.mean([2,6,10]); <br>
+            <br>
+            Node.js Modules <br>
+            <br>
+            Node.js had already implemented modules before they were introduced in ES6,<br>
+            and used a slightly different notation called Common JS modules <br>
+            it is expected that Node.js will support ES6 modules in some way in the future. <br>
+        </p>
 </body>
+
 </html>
