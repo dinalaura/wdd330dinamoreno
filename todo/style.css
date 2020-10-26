@@ -83,3 +83,7 @@
     opacity: 0.5;
   }
   
+  .todo-input::placeholder{
+    color:red;
+    opacity: .10;
+  }
