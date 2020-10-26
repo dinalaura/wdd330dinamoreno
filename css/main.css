@@ -1,5 +1,6 @@
 body {
     background-color: rgb(247, 230, 211);
+font-family: sans-serif;
 }
 
 h1,
@@ -11,10 +12,18 @@ h2 {
 h1 {
     color: rgb(247, 230, 211);
     background-color: blueviolet;
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+  }
 }
 
 ol {
     font-weight: bold;
+    padding:1em;
+    color: black;
 }
 
 a {
