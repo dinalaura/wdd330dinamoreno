@@ -14,9 +14,9 @@
 
     <h2>W04 Notes from JavaScript: Novice to Ninja</h2>
 
-  
-       <h3> Forms</h3>
-        <p>Forms are a very common method of interacting with a web page, most of us use forms every<br>
+
+    <h3> Forms</h3>
+    <p>Forms are a very common method of interacting with a web page, most of us use forms every<br>
         day to log in to our favorite sites, forms can be used to interact with a JavaScript program. <br>
         <br>
         Forms are made up of a &lt;form > element that contains form controls such as input fields, <br>
@@ -28,10 +28,10 @@
         and becoming more and more common, to process the information in a form on the front end<br>
         before it is sent to the server using JavaScript <br>
         <br>
-        </p>    
-        <h3>A Searching Example</h3>
-        <br>
-        <p>&lt; !doctype html > <br>
+    </p>
+    <h3>A Searching Example</h3>
+    <br>
+    <p>&lt; !doctype html > <br>
         &lt; html lang='en'> &lt; head > <br>
         &lt; meta charset='utf-8'> &lt; title >Search &lt;/ title > &lt;/ head > <br>
         <br>
@@ -47,10 +47,10 @@
         <br>
         <a href="https://codepen.io/Dina-Laura/pen/ExyjgQw">CodePen Example</a><br>
         <br>
-        </p>
-        <h3>Accessing Form Elements</h3>
-        <br>
-       <p>The legacy DOM had a useful property called document .forms that returns an HTML collection<br>
+    </p>
+    <h3>Accessing Form Elements</h3>
+    <br>
+    <p>The legacy DOM had a useful property called document .forms that returns an HTML collection<br>
         of all the forms in the document in the order they appear in the markup. <br>
         <br>
         Form Events <br>
@@ -231,9 +231,9 @@
         <br>
         <a href="https://codepen.io/daz4126/pen/Kqojgj">CodePen Example</a><br>
         <br></p>
-        <h3>Modular JavaScript</h3> <br>
-        <br>
-        <p>A module is a self-contained piece of code that provides functions and methods <br>
+    <h3>Modular JavaScript</h3> <br>
+    <br>
+    <p>A module is a self-contained piece of code that provides functions and methods <br>
         that can then be used in other files and by other modules. The code in a module<br>
         should have a single purpose, and group together functions with distinct functionality. <br>
         <br>
@@ -243,8 +243,8 @@
         <br>
         <br></p>
 
-        <h3>Coupling </h3><br>
-        <p>The coupling of code refers to how dependent certain elements or modules of code are on each other.<br>
+    <h3>Coupling </h3><br>
+    <p>The coupling of code refers to how dependent certain elements or modules of code are on each other.<br>
         Two pieces of code are said to be tightly coupled if one relies on the other to run. <br>
         It is considered good design to keep code as loosely coupled as possible <br>
         as this allows for the most flexibility in developing systems of code,<br>
@@ -252,51 +252,51 @@
         rather than being restricted to a single use-case. <br>
         <br></p>
 
-        <h3>ES6 Modules</h3> <br>
+    <h3>ES6 Modules</h3> <br>
+    <br>
+    <p>For a long time, JavaScript didn’t support modules, but native support for them was finally added in ES6.
         <br>
-        <p>For a long time, JavaScript didn’t support modules, but native support for them was finally added in ES6.
-            <br>
-            They allow you to keep parts of code in self-contained files. <br>
-            <br>
-            There are a few important points about modules that are worth keeping in mind: <br>
-            <br>
-            All code in modules is always in strict mode without the need for 'use strict' and there is no way to opt
-            out of this. <br>
-            A module has its own global scope, so any variables created in the top-level of a module can only be
-            accessed within that module. <br>
-            The value of this in the top level of a module is undefined, rather than the global object. <br>
-            You can’t use HTML-style comments in modules <br>
-            <br>
-            A ES6 module file is just a normal JavaScript file, but uses the keyword export to specify <br>
-            any values or functions that are to be made available from the module.
-            a very simple Pi module would have the following code saved in a file called pi.js: <br>
-            <br>
-            export const PI = 3.1415926; <br>
-            <br>
-            This would then be imported into your main JavaScript file, main.js using the following code: <br>
-            <br>
-            import { PI } from './pi.js'; <br>
-            <br>
-            This would then allow you to use the variable PI inside the main.js file. <br>
-            <br>
-            If there are lots of values and functions that need to be imported, <br>
-            then everything in a module file can be imported using the wildcard symbol * along with a namespace<br>
-            for the imported values and functions using the following notation: <br>
-            <br>
-            import * as stats from './stats.js'; <br>
-            <br>
-            This will then import all the functions from the stats.js module and they’ll be given a namespace of
-            stats.<br>
-            So, the mean function could be used as follows: <br>
-            <br>
-            stats.mean([2,6,10]); <br>
-            <br>
-            Node.js Modules <br>
-            <br>
-            Node.js had already implemented modules before they were introduced in ES6,<br>
-            and used a slightly different notation called Common JS modules <br>
-            it is expected that Node.js will support ES6 modules in some way in the future. <br>
-        </p>
+        They allow you to keep parts of code in self-contained files. <br>
+        <br>
+        There are a few important points about modules that are worth keeping in mind: <br>
+        <br>
+        All code in modules is always in strict mode without the need for 'use strict' and there is no way to opt
+        out of this. <br>
+        A module has its own global scope, so any variables created in the top-level of a module can only be
+        accessed within that module. <br>
+        The value of this in the top level of a module is undefined, rather than the global object. <br>
+        You can’t use HTML-style comments in modules <br>
+        <br>
+        A ES6 module file is just a normal JavaScript file, but uses the keyword export to specify <br>
+        any values or functions that are to be made available from the module.
+        a very simple Pi module would have the following code saved in a file called pi.js: <br>
+        <br>
+        export const PI = 3.1415926; <br>
+        <br>
+        This would then be imported into your main JavaScript file, main.js using the following code: <br>
+        <br>
+        import { PI } from './pi.js'; <br>
+        <br>
+        This would then allow you to use the variable PI inside the main.js file. <br>
+        <br>
+        If there are lots of values and functions that need to be imported, <br>
+        then everything in a module file can be imported using the wildcard symbol * along with a namespace<br>
+        for the imported values and functions using the following notation: <br>
+        <br>
+        import * as stats from './stats.js'; <br>
+        <br>
+        This will then import all the functions from the stats.js module and they’ll be given a namespace of
+        stats.<br>
+        So, the mean function could be used as follows: <br>
+        <br>
+        stats.mean([2,6,10]); <br>
+        <br>
+        Node.js Modules <br>
+        <br>
+        Node.js had already implemented modules before they were introduced in ES6,<br>
+        and used a slightly different notation called Common JS modules <br>
+        it is expected that Node.js will support ES6 modules in some way in the future. <br>
+    </p>
 </body>
 
 </html>

@@ -251,44 +251,44 @@
                 <br>
             </p>
             <h3>Example of Code</h3>
-           <p> In this code the variables are set, and then the program access the DOM <br>
-            with query selectors and getting elements by id: <br>
-            <br>
-            const quiz = [ <br>
+            <p> In this code the variables are set, and then the program access the DOM <br>
+                with query selectors and getting elements by id: <br>
+                <br>
+                const quiz = [ <br>
 
-            { name: "Superman",realName: "Clark Kent" }, <br>
+                { name: "Superman",realName: "Clark Kent" }, <br>
 
-            { name: "Wonderwoman",realName: "Dianna Prince" }, <br>
+                { name: "Wonderwoman",realName: "Dianna Prince" }, <br>
 
-            { name: "Batman",realName: "Bruce Wayne" }, <br>
+                { name: "Batman",realName: "Bruce Wayne" }, <br>
 
-            ]; <br>
-            <br>
-            // View Object <br>
-            <br>
-            const view = { <br>
-            score: document.querySelector('#score strong'), <br>
-            question: document.getElementById('question'), <br>
-            result: document.getElementById('result'), <br>
-            info: document.getElementById('info'), <br>
-            render(target,content,attributes) { <br>
-            for(const key in attributes) { <br>
-            <br>
-            target.setAttribute(key, attributes[key]); <br>
-            <br>
-            } <br>
-            <br>
-            target.innerHTML = content; <br>
-            <br>
-            } <br>
-            <br>
-            }; <br>
-            <br>
-            <a href="https://codepen.io/daz4126/pen/LLdJww">CodePen</a><br>
-            <br><br><br><br>
+                ]; <br>
+                <br>
+                // View Object <br>
+                <br>
+                const view = { <br>
+                score: document.querySelector('#score strong'), <br>
+                question: document.getElementById('question'), <br>
+                result: document.getElementById('result'), <br>
+                info: document.getElementById('info'), <br>
+                render(target,content,attributes) { <br>
+                for(const key in attributes) { <br>
+                <br>
+                target.setAttribute(key, attributes[key]); <br>
+                <br>
+                } <br>
+                <br>
+                target.innerHTML = content; <br>
+                <br>
+                } <br>
+                <br>
+                }; <br>
+                <br>
+                <a href="https://codepen.io/daz4126/pen/LLdJww">CodePen</a><br>
+                <br><br><br><br>
 
 
-        </p>
+            </p>
 </body>
 
 </html>

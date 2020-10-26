@@ -1,238 +1,244 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Dina Moreno G Portfolio - WDD 330">
-    <title>W02 Notes WDD 330</title>
-    <link rel="stylesheet" href="../css/main.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dina Moreno G Portfolio - WDD 330">
+  <title>W02 Notes WDD 330</title>
+  <link rel="stylesheet" href="../css/main.css">
 </head>
+
 <body>
-    <h1>WDD 330: Portfolio</h1>
-    <h2>W02 Notes from JavaScript: Novice to Ninja</h2>
-    <p>
-        This article is based on personal notes from chapters 2, 3, and 4 from Javascript novice to ninja.<br>
-        <br></p>
-        <h3>Programming Basic </h3><br>
-        <br>
-        <p>In programming, a comment is a piece of code that is ignored by the language. It makes it easier for <br>
-        anybody to read code. <br>
-        <br>
-        // this is a short comment<br>
-        <br>
-        /* This is a longer comment */<br>
-        <br>
-        The JavaScript syntax is C-style because of its similarities with the C programming language.<br>
-        Statements end with a new line or semicolon; there's no need to use a semicolon because interpreters <br>
-        use Automatic Semicolon Insertion; however, it is a good practice.<br>
-        <br>
-        const message = "Hello World!";<br>
-        <br>
-        A block is a series of statements that are collected together inside curly braces; <br>
-        blocks don't need to be terminated by a semicolon. Whitespace in the code makes it neat and easy to read. <br>
-        <br>
-        There are reserved words for the use of JavaScript. Those words are not available to name variables, <br>
-        functions, or objects. There are few words though that should be reserved but are not:<br>
-        undefined<br>
-        NaN<br>
-        Infinity<br>
-        <br>
-        JavaScript has seven different data types. Six of them are primitive data types:<br>
-        String<br>
-        Symbol<br>
-        Number<br>
-        Boolean<br>
-        Undefined<br>
-        Null<br>
-        <br>
-        Objects are not primitive data, and these include arrays, functions, and object literals. <br>
-        You can use typeof for finding the type of value, for example:<br>
-        typeof "hello"<br>
-        &lt;&lt; "string"<br>
-        <br>
-        Variables are used in programming languages to refer to a value stored in memory, <br>
-        there are several ways to declare a variable, and to assign a value we use the = operator.<br>
-        <br>
-        const name = "Hello" // can't change<br>
-        let name = "Hello" // can change<br>
-        <br>
-        You can assign multiple variables at the same time:<br>
-        let x=3, y=4, z=5<br>
-        <br>
-        You should try to use const to declare most variables to avoid bugs.<br>
-        <br>
-        In previous versions of JavaScript variables were declared with var. The difference between var and const <br>
-        or let is that the last two have block scope.<br>
-        <br>
-        Block scoped means that those variables only exits inside the block. Scope refers to where a constant or <br>
-        variable is accessible by the program. <br>
-        <br>
-        Global scope means that it is accessible everywhere in the program, and is not considered a good practice, <br>
-        try to use it to a minimum.<br>
-        <br>
-        Local scope use let or const, those are defined inside the block. <br>
-        <br>
-        You should name constants and variables with sensible names that describe what the variable represents. <br>
-        The names can start with any upper or lower-case letter, an underscore, or dollar character; they can <br>
-        contain numbers but not start with them. Also, remember that variable names are case sensitive.<br>
-        <br>
-        If you're using multiple words you may want to use Camel Case, it starts with lowercase and each new word <br>
-        starts capitalized. Another option is to use underscores to separate but is not that convenient.<br>
-        <br>
-        A string is a set of characters, letters, and symbols. You can create strings using a constructor function:<br>
-        <br>
-        new String("hello")<br>
-        &lt;&lt; [String: "hello"]<br>
-        <br>
-        If you want to escape a special character you may want to use the backslash.<br>
-        <br>
-        Primitive data types and objects have properties and methods. Properties are information about the object or value,<br>
-         and methods perform an action on the object.<br>
-         <br>
-        Dot notation is used to access the properties of a string. <br>
-        name.length // variable's length property<br>
-        <br>
-        A method is a task primitive data can perform, methods, and with parentheses. For example:<br>
-        <br>
-        toUpperCase() method<br>
-        name.toUpperCase();<br>
-        &lt;&lt; "NAME"<br>
-        <br>
-        There are a variety of methods:<br>
-        toLowerCase();<br>
-        charAt();<br>
-        indexOf();<br>
-        includes();<br>
-        startWith();<br>
-        concat();<br>
-        trim();<br>
-        <br>
-        Template literals use the backtick character ` to deliminate the string. They allow interpolation, <br>
-        which is an expression that can be inserted inside a string.<br>
-        <br>
-        const name = `Siri`; `Hello ${ name }!`; &lt;&lt; 'Hello Siri!' <br>
-        <br>
-        Symbols are a new primitive value in ES6. They create unique values, they don't have a literal form.<br>
-        const uniqueID = Symbol();<br>
-        <br>
-        Numbers can be integers or floating-point numbers. If a number starts with 0x is hexadecimal. <br>
-        JavaScript allows exponential notation 1e6 // 1 multiplied by 10 to the power 6<br>
-        <br>
-        Numbers also have methods:<br>
-        toExponential()<br>
-        toFixed()<br>
-        toPrecision()<br>
-        <br>
-        Arithmetic Operations can be carried out in JavaScript. Addition, subtraction, multiplication, division, <br>
-        exponentiation, or a remainder of a division.<br>
-        <br>
-        </p>
-        <h3>Arrays, Logic, and Loops</h3><br>
-        <br>
-        <p>An array is an ordered list of values, to create an array literal write a pair of square brackets:<br>
-        const myArray = [];<br>
-        <br>
-        As I stated before arrays are not primitive values. Arrays use the index to access a specific value in an array. <br>
-        heroes[0] = "Superman";<br>
-        <br>
-        Each item in an array works as a variable, you change the value using the assignment operator. <br>
-        Unsued slots in the array are filled by the value undefined. Arrays contain a variety of data types and <br>
-        empty array objects.<br>
-        const mixedArray = [null, 1, [], "two, true"];<br>
-        <br>
-        The delete operator will remove an item from an array, but doesn't remove the place in the index,<br>
-         that is replaced with undefined.<br>
-         <br>
-        There are different properties and methods for arrays. The length property or pop(), push(), <br>
-        shift() and unshift() method, etc. Also, you can find if an array contains a particular value <br>
-        using the indexOf() method. Multidimensional arrays are arrays of arrays.<br>
-        <br>
-        A set is a data structure that represents a collection of unique values, an empty set is creating<br>
-        using the new operator:<br>
-        const list = new Set();<br>
-        You can add value:<br>
-        list.add(1). Seth also has methods like the size() method or the has() method, this last one <br>
-        checks if a value is in a set. To remove a value from a set use the delete() method.<br>
-        <br>
-        Maps are another data structure, they are similar to objects, but they are limited to using <br>
-        strings for key values, and other differences.<br>
-        <br>
-        An empty map object uses the new operator and the Map() constructor.<br>
-        const romanNumerals = new Map();<br>
-        // add entries<br>
-        romanNumeral.set(1, "I");<br>
-        Some of the Map methods are get(), has(), delete() or clear().<br>
-        <br>
-        </p>
-        <h3>Logic</h3><br>
-        <br>
-        <p>If Statements are logical conditions that allow controlling the flow of a program.<br>
-        if(condition){<br>
-        // code to run if condition is true<br>
-        }<br>
-        <br>
-        The else keyword can be used to add an alternative block of code to run.<br>
-        if (condition){<br>
-        // code to run if condition is true}<br>
-        else{<br>
-        //code to run if condition is false}<br>
-        <br>
-        The switch operator can be used to make code easier to read or follow.<br>
-        switch (number) {<br>
-         case 4:<br>
-         console.log('You rolled a four'); break;<br>
-         case 5:<br>
-         console.log('You rolled a five'); break; <br>
-         <br>
-        They are different kinds of loops, that is code that will repeat over and over again <br>
-        according to conditions. While loops, do... while loops, for loops, nested for loops, <br>
-        and also you have to take care of infinite loops.<br>
-        <br>
-        </p>
+  <h1>WDD 330: Portfolio</h1>
+  <h2>W02 Notes from JavaScript: Novice to Ninja</h2>
+  <p>
+    This article is based on personal notes from chapters 2, 3, and 4 from Javascript novice to ninja.<br>
+    <br></p>
+  <h3>Programming Basic </h3><br>
+  <br>
+  <p>In programming, a comment is a piece of code that is ignored by the language. It makes it easier for <br>
+    anybody to read code. <br>
+    <br>
+    // this is a short comment<br>
+    <br>
+    /* This is a longer comment */<br>
+    <br>
+    The JavaScript syntax is C-style because of its similarities with the C programming language.<br>
+    Statements end with a new line or semicolon; there's no need to use a semicolon because interpreters <br>
+    use Automatic Semicolon Insertion; however, it is a good practice.<br>
+    <br>
+    const message = "Hello World!";<br>
+    <br>
+    A block is a series of statements that are collected together inside curly braces; <br>
+    blocks don't need to be terminated by a semicolon. Whitespace in the code makes it neat and easy to read. <br>
+    <br>
+    There are reserved words for the use of JavaScript. Those words are not available to name variables, <br>
+    functions, or objects. There are few words though that should be reserved but are not:<br>
+    undefined<br>
+    NaN<br>
+    Infinity<br>
+    <br>
+    JavaScript has seven different data types. Six of them are primitive data types:<br>
+    String<br>
+    Symbol<br>
+    Number<br>
+    Boolean<br>
+    Undefined<br>
+    Null<br>
+    <br>
+    Objects are not primitive data, and these include arrays, functions, and object literals. <br>
+    You can use typeof for finding the type of value, for example:<br>
+    typeof "hello"<br>
+    &lt;&lt; "string"<br>
+    <br>
+    Variables are used in programming languages to refer to a value stored in memory, <br>
+    there are several ways to declare a variable, and to assign a value we use the = operator.<br>
+    <br>
+    const name = "Hello" // can't change<br>
+    let name = "Hello" // can change<br>
+    <br>
+    You can assign multiple variables at the same time:<br>
+    let x=3, y=4, z=5<br>
+    <br>
+    You should try to use const to declare most variables to avoid bugs.<br>
+    <br>
+    In previous versions of JavaScript variables were declared with var. The difference between var and const <br>
+    or let is that the last two have block scope.<br>
+    <br>
+    Block scoped means that those variables only exits inside the block. Scope refers to where a constant or <br>
+    variable is accessible by the program. <br>
+    <br>
+    Global scope means that it is accessible everywhere in the program, and is not considered a good practice, <br>
+    try to use it to a minimum.<br>
+    <br>
+    Local scope use let or const, those are defined inside the block. <br>
+    <br>
+    You should name constants and variables with sensible names that describe what the variable represents. <br>
+    The names can start with any upper or lower-case letter, an underscore, or dollar character; they can <br>
+    contain numbers but not start with them. Also, remember that variable names are case sensitive.<br>
+    <br>
+    If you're using multiple words you may want to use Camel Case, it starts with lowercase and each new word <br>
+    starts capitalized. Another option is to use underscores to separate but is not that convenient.<br>
+    <br>
+    A string is a set of characters, letters, and symbols. You can create strings using a constructor function:<br>
+    <br>
+    new String("hello")<br>
+    &lt;&lt; [String: "hello"]<br>
+    <br>
+    If you want to escape a special character you may want to use the backslash.<br>
+    <br>
+    Primitive data types and objects have properties and methods. Properties are information about the object or
+    value,<br>
+    and methods perform an action on the object.<br>
+    <br>
+    Dot notation is used to access the properties of a string. <br>
+    name.length // variable's length property<br>
+    <br>
+    A method is a task primitive data can perform, methods, and with parentheses. For example:<br>
+    <br>
+    toUpperCase() method<br>
+    name.toUpperCase();<br>
+    &lt;&lt; "NAME"<br>
+    <br>
+    There are a variety of methods:<br>
+    toLowerCase();<br>
+    charAt();<br>
+    indexOf();<br>
+    includes();<br>
+    startWith();<br>
+    concat();<br>
+    trim();<br>
+    <br>
+    Template literals use the backtick character ` to deliminate the string. They allow interpolation, <br>
+    which is an expression that can be inserted inside a string.<br>
+    <br>
+    const name = `Siri`; `Hello ${ name }!`; &lt;&lt; 'Hello Siri!' <br>
+    <br>
+    Symbols are a new primitive value in ES6. They create unique values, they don't have a literal form.<br>
+    const uniqueID = Symbol();<br>
+    <br>
+    Numbers can be integers or floating-point numbers. If a number starts with 0x is hexadecimal. <br>
+    JavaScript allows exponential notation 1e6 // 1 multiplied by 10 to the power 6<br>
+    <br>
+    Numbers also have methods:<br>
+    toExponential()<br>
+    toFixed()<br>
+    toPrecision()<br>
+    <br>
+    Arithmetic Operations can be carried out in JavaScript. Addition, subtraction, multiplication, division, <br>
+    exponentiation, or a remainder of a division.<br>
+    <br>
+  </p>
+  <h3>Arrays, Logic, and Loops</h3><br>
+  <br>
+  <p>An array is an ordered list of values, to create an array literal write a pair of square brackets:<br>
+    const myArray = [];<br>
+    <br>
+    As I stated before arrays are not primitive values. Arrays use the index to access a specific value in an array.
+    <br>
+    heroes[0] = "Superman";<br>
+    <br>
+    Each item in an array works as a variable, you change the value using the assignment operator. <br>
+    Unsued slots in the array are filled by the value undefined. Arrays contain a variety of data types and <br>
+    empty array objects.<br>
+    const mixedArray = [null, 1, [], "two, true"];<br>
+    <br>
+    The delete operator will remove an item from an array, but doesn't remove the place in the index,<br>
+    that is replaced with undefined.<br>
+    <br>
+    There are different properties and methods for arrays. The length property or pop(), push(), <br>
+    shift() and unshift() method, etc. Also, you can find if an array contains a particular value <br>
+    using the indexOf() method. Multidimensional arrays are arrays of arrays.<br>
+    <br>
+    A set is a data structure that represents a collection of unique values, an empty set is creating<br>
+    using the new operator:<br>
+    const list = new Set();<br>
+    You can add value:<br>
+    list.add(1). Seth also has methods like the size() method or the has() method, this last one <br>
+    checks if a value is in a set. To remove a value from a set use the delete() method.<br>
+    <br>
+    Maps are another data structure, they are similar to objects, but they are limited to using <br>
+    strings for key values, and other differences.<br>
+    <br>
+    An empty map object uses the new operator and the Map() constructor.<br>
+    const romanNumerals = new Map();<br>
+    // add entries<br>
+    romanNumeral.set(1, "I");<br>
+    Some of the Map methods are get(), has(), delete() or clear().<br>
+    <br>
+  </p>
+  <h3>Logic</h3><br>
+  <br>
+  <p>If Statements are logical conditions that allow controlling the flow of a program.<br>
+    if(condition){<br>
+    // code to run if condition is true<br>
+    }<br>
+    <br>
+    The else keyword can be used to add an alternative block of code to run.<br>
+    if (condition){<br>
+    // code to run if condition is true}<br>
+    else{<br>
+    //code to run if condition is false}<br>
+    <br>
+    The switch operator can be used to make code easier to read or follow.<br>
+    switch (number) {<br>
+    case 4:<br>
+    console.log('You rolled a four'); break;<br>
+    case 5:<br>
+    console.log('You rolled a five'); break; <br>
+    <br>
+    They are different kinds of loops, that is code that will repeat over and over again <br>
+    according to conditions. While loops, do... while loops, for loops, nested for loops, <br>
+    and also you have to take care of infinite loops.<br>
+    <br>
+  </p>
 
-        <h3>Functions</h3><br>
-        <br>
-        <p>Functions are first-class objects, they behave the same way as all the other primitive data types.<br>
-        function hello(){<br>
-        console.log("Hello World!")}<br>
-        <br>
-        Invoking a function is to run the code inside of it. <br>
-        hello(); <br>
-        <br>
-        All functions return a value, they use the word return as a statement. <br>
-        A function that does not return anything will return undefined. <br>
-        <br>
-        Any parameters a function needs are set when the function is defined. <br>
-        When a function is invoked it is provided with arguments.<br>
-        <br>
-        An arrow function is written like this:<br>
-        const square = x => x*x;<br>
-        const hello = () => alert("Hello World!");<br>
-        <br>
-        A function that is passed as an argument to another is a callback:<br>
-        function sing(song,callback) { console.log(`I'm singing along to ${song}.`); callback();<br>
-         } <br>
-         <br>
-    </p>
-        <h3>Code Snippet</h3>
-    <p>
-      &lt;section class='dojo'> <br>
-            &lt;div class='quiz-body'> <br>
-            &lt;header> <br>
-            &lt;h1>Quiz Ninja!&lt;/h1> <br>
-            &lt;/header> <br>
-            &lt;/div> <br>
-            &lt;/section> <br>
-          <br>
-          const question = "What is Superman's real name?" <br>
-          const answer = prompt(question); <br>
-          alert(`You answered ${answer}`); <br> 
-          <a href="https://codepen.io/daz4126/pen/OmapEN?__cf_chl_jschl_tk__=a2e0ece360300db65b2e1b21fdddf60130be4594-1601095967-0-Afovsi4CGc_v5dL8pzYVvuLCyFPypB28-A1uRwtsADMzR1qMsmIDHPdmHW90A1YtIQa_WYMRp-mwVydLwlTNZHl5XllogupQs9E-fa_S_tg1G-GzK9J9w0qGKig4646rjW7HaYhm5WKMdf4aBYtq_dmQt_M9hGdCScXSZT_6xRC1X_uLsxPZNjN_Hl0hQlTqtEe8_a3CA6PAgGMq0gVqJUdtgF-dPyZAVSehzjnZCCwzynRy9E1SyJbMB4za2McIDGbnGvVJllgQN_CMu1-x2jBKxtn_THYvHOjopCt2351DgS5gW-ryGJEI7pupLJ5sJLcFIeZBLr0AOrZLtEnnlo8tq0LripHN6uqaZfUTng18">
-            Codepen Snippet</a>
+  <h3>Functions</h3><br>
+  <br>
+  <p>Functions are first-class objects, they behave the same way as all the other primitive data types.<br>
+    function hello(){<br>
+    console.log("Hello World!")}<br>
+    <br>
+    Invoking a function is to run the code inside of it. <br>
+    hello(); <br>
+    <br>
+    All functions return a value, they use the word return as a statement. <br>
+    A function that does not return anything will return undefined. <br>
+    <br>
+    Any parameters a function needs are set when the function is defined. <br>
+    When a function is invoked it is provided with arguments.<br>
+    <br>
+    An arrow function is written like this:<br>
+    const square = x => x*x;<br>
+    const hello = () => alert("Hello World!");<br>
+    <br>
+    A function that is passed as an argument to another is a callback:<br>
+    function sing(song,callback) { console.log(`I'm singing along to ${song}.`); callback();<br>
+    } <br>
+    <br>
+  </p>
+  <h3>Code Snippet</h3>
+  <p>
+    &lt;section class='dojo'> <br>
+    &lt;div class='quiz-body'> <br>
+    &lt;header> <br>
+    &lt;h1>Quiz Ninja!&lt;/h1> <br>
+    &lt;/header> <br>
+    &lt;/div> <br>
+    &lt;/section> <br>
+    <br>
+    const question = "What is Superman's real name?" <br>
+    const answer = prompt(question); <br>
+    alert(`You answered ${answer}`); <br>
+    <a
+      href="https://codepen.io/daz4126/pen/OmapEN?__cf_chl_jschl_tk__=a2e0ece360300db65b2e1b21fdddf60130be4594-1601095967-0-Afovsi4CGc_v5dL8pzYVvuLCyFPypB28-A1uRwtsADMzR1qMsmIDHPdmHW90A1YtIQa_WYMRp-mwVydLwlTNZHl5XllogupQs9E-fa_S_tg1G-GzK9J9w0qGKig4646rjW7HaYhm5WKMdf4aBYtq_dmQt_M9hGdCScXSZT_6xRC1X_uLsxPZNjN_Hl0hQlTqtEe8_a3CA6PAgGMq0gVqJUdtgF-dPyZAVSehzjnZCCwzynRy9E1SyJbMB4za2McIDGbnGvVJllgQN_CMu1-x2jBKxtn_THYvHOjopCt2351DgS5gW-ryGJEI7pupLJ5sJLcFIeZBLr0AOrZLtEnnlo8tq0LripHN6uqaZfUTng18">
+      Codepen Snippet</a>
 
-          <br><br><br><br>
-    </p>
+    <br><br><br><br>
+  </p>
 
 
 </body>
+
 </html>

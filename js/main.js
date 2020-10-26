@@ -36,7 +36,7 @@ links.forEach(links => {
   let anchor = document.createElement("a");
   anchor.setAttribute("href", links.url);
   anchor.innerText = links.label;
-  
+
   item.appendChild(anchor);
-  myList.appendChild(item); 
+  myList.appendChild(item);
 });
