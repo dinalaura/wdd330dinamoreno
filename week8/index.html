@@ -1,13 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W08 Notes WDD 330</title>
     <link rel="stylesheet" href="../css/main.css">
 </head>
+
 <body>
     <h1>WDD 330: Portfolio</h1>
-    <h2>W08 Notes from  HTML5 and CSS3 for the Real world</h2>
+    <h2>W08 Notes from HTML5 and CSS3 for the Real world</h2>
+    <h3> CSS3 Transforms and Transitions</h3>
+    <h3>Transforms</h3>
+    <p>
+        The CSS3 transform property lets you translate, rotate, scale, and/or skew any element on the page.<br>
+        <br>
+        We can manipulate an element’s appearance using transform functions. The value of the transform property is
+        one<br>
+        or more transform functions (separated by spaces) that will be applied in the order they’re provided.<br>
+        <br>
+        Translation
+        <br>
+
+        Translation functions allow you to move elements left, right, up, or down.<br>
+        <br>
+        When you employ a translation function, you’re moving elements without impacting the flow of the document.<br>
+        <br>
+        The translate(x,y) function moves an element x from the left, and y from the top:<br>
+        <br>
+        transform: translate(45px, -45px);<br>
+        <br>
+        If you only want to move an element vertically or horizontally, you can use the translatex or translatey<br>
+        functions respectively. To move 45px to the right along the x axis, include:<br>
+        <br>
+        transform: translateX(45px);<br>
+        <br>
+        To move up along the y axis by 30px, include:<br>
+        <br>
+        transform: translateY(-30px);<br>
+        <br>
+        Transforms don’t work on inline elements, to fix that use add display: inline-block.<br>
+
+        Scaling<br>
+
+        The scale(x,y) function scales an element by the defined factors horizontally then vertically. If only one
+        value<br>
+        is provided, it will be used for both the x and y values.
+        <br>
+        transform: scale(1.5, 0.25);<br>
+
+
+        As with translate, you can also use the scaleX(x) or scaleY(y) functions. These functions will scale only
+        the<br>
+        horizontal dimensions or only the vertical dimensions respectively.<br>
+        <br>
+        To declare multiple transformations, provide a space-separated list of transform functions.<br>
+        <br>
+        Scaling has no impact on the document flow. <br>
+        <br>
+        Rotation<br>
+
+
+        The rotate() function rotates an element around the point of origin by a specified angle value.<br>
+        <br>
+        Generally, angles are declared in degrees, with positive degrees moving clockwise and negative moving<br>
+        counterclockwise, values can be provided in grads, radians, or turns.<br>
+        <br>
+        Example, rotate transform:<br>
+
+        .ad-ad2 h1:hover span {<br>
+        color: #484848;<br>
+        transform: rotate(10deg) translateX(40px) scale(1.5);<br>
+        }<br>
+
+        <br>
+
+        Skew<br>
+
+        The skew(x,y) function specifies a skew along the x and y axes. If the second parameter is omitted, the skew<br>
+        will only occur on the x axis:
+        <br>
+
+        transform: skew(15deg, 4deg);<br>
+
+        There are axis-specific versions of the skew transform:<br>
+        skewX() and skewY().<br>
+        <br>
+        Changing the Origin of the Transform<br>
+        <br>
+        You can control the origin from which your transforms are applied. This is done using the transform-origin<br>
+        property.
+        <br>
+        Example, Rotating an ellipse1 is more noticeable if the transform-origin is set to something other than the<br>
+        default 50% 50%
+        <br>
+        <a href="https://codepen.io/Dina-Laura/pen/OJXoYyG">CODEPEN</a><br>
+        <br>
+        Support for Internet Explorer 8 and Earlier<br>
+
+        <br>
+        While CSS3 transforms are unsupported in IE before version 9, you can mimic these effects with other CSS<br>
+        properties, including filters. To mimic translation use posi- tion: relative;, and top and left values:<br>
+        <br>
+        .translate { <br>
+        position: relative; <br>
+        top: 200px;<br>
+        left: 200px;<br>
+        }<br>
+    </p>
+    <h3>Transitions</h3>
+    <p>
+        <br>
+        Transitions allow the values of CSS properties to change over time, essentially providing simple animations.<br>
+
+        <br>
+        CSS transitions are declared along with the regular styles on an element. Whenever the target properties
+        change,<br>
+        the browser will apply the transition making the change gradual.<br>
+        <br>
+        Steps to create a simple transition using only CSS:<br>
+        <br>
+        1. Declare the original state of the element in the default style declaration.<br>
+        2. Declare the final state of your transitioned element; for example, a :hover state.<br>
+        3. Include the transition functions in your default style declaration using the transition properties,<br>
+        including: transition-property, transition-duration, transition-timing-function, and transition-delay.<br>
+        <br>
+        Transition-property<br>
+        <br>
+        The transition-property defines the CSS properties of the element that should be transitioned, with all for
+        all<br>
+        properties being the default.
+        Any property changing from one value to another for which you can find a valid midpoint can be transitioned.<br>
+        <br>
+        The list of properties that can be animated is found at <br>
+        <a href=" https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties"></a><br>
+        <br>
+        Example, transition to the transform property:<br>
+        <br>
+        .ad-ad2 h1 span { <br>
+        transition-property: transform;<br>
+        }<br>
+        <br>
+        The transition-duration Property<br>
+        <br>
+        The transition-duration property sets how long the transition will take: the duration of time it takes to go<br>
+        from the default state to the transitioned state.<br>
+
+        <br>
+        transition-duration: 0.2s;<br>
+        <br>
+        The transition-timing-function Property<br>
+        <br>
+
+        The transition-timing-function lets you control the pace of the transition in even more granular detail.<br>
+
+        <br>
+        The most common timing functions include the key terms ease, linear, ease-in, ease-out, or ease-in-out.<br>
+        <br>
+        The transition-delay Property<br>
+        <br>
+        The transition-delay property, it’s possible to introduce a delay before the transition begins. Include the<br>
+        number of milliseconds (ms) or seconds (s) to delay the transition.
+        <br>
+        -webkit-transition-delay: 50ms;<br>
+        transition-delay: 50ms;<br>
+        <br>
+        The transition Shorthand Property<br>
+        <br>
+        transition:<br>
+        <br>
+        .ad-ad2 h1 span {<br>
+        transition-property: transform; <br>
+        transition-duration: 0.2s; <br>
+        transition-timing-function: ease-out; <br>
+        transition-delay: 50ms;<br>
+        }<br>
+        Shorthand declaration:<br>
+        <br>
+        .ad-ad2 h1 span {<br>
+        transition: transform 0.2s ease-out 50ms;<br>
+        }<br>
+        <br>
+        Multiple Transitions<br>
+        <br>
+        The transition properties allow for multiple transitions in one call. <br>
+        <br>
+        transition-property: transform, color; <br>
+        transition-duration: 0.2s; <br>
+        transition-timing-function: ease-out; <br>
+        transition-delay: 50ms;<br>
+    </p>
+    <h3>Animations</h3>
+    <p>
+        Transitions animate elements over time; however, they’re limited in what they can do. You can define
+        starting<br>
+        and ending states, but there’s no fine-grained control over any intermediate states. CSS animations, unlike<br>
+        transitions, allow you to control each step of an animation via keyframes.<br>
+        <br>
+        A keyframe is a snapshot that defines a starting or end point of any smooth transition. With CSS
+        transitions,<br>
+        we’re essentially limited to defining a first and a last keyframe. CSS animations allow us to add any number
+        of<br>
+        keyframes in between, to guide our animation in more complex ways.<br>
+        <br>
+        Keyframes<br>
+        <br>
+        To animate an element in CSS, you first create a named animation, then attach it to an element in that
+        element’s<br>
+        property declaration block.
+        <br>
+        For an animation called myAnimation, the @keyframes rule would look like this:<br>
+        <br>
+        @-webkit-keyframes myAnimation {<br>
+        /* put animation keyframes here */<br>
+        }<br>
+        @keyframes myAnimation {<br>
+        /* put animation keyframes here */<br>
+        }<br>
+        <br>
+        Animation Properties<br>
+        <br>
+        animation-name<br>
+        <br>
+        This property is used to attach an animation (previously defined using the @key- frames syntax) to an
+        element:<br>
+        <br>
+        animation-name: appearDisappear;
+        <br>
+        animation-duration
+        <br>
+        The animation-duration property defines the length of time an animation takes to complete one iteration.<br>
+        <br>
+        animation-duration: 300ms;<br>
+        <br>
+        animation-timing-function<br>
+        <br>
+        Like the transition-timing-function property, the animation-timing-function determines how the animation
+        will<br>
+        progress over its duration.
+        <br>
+        animation-timing-function: linear;<br>
+
+        animation-iteration-count<br>
+        <br>
+        The animation-iteration-count property lets you define how many times the animation will play through.<br>
+        <br>
+        animation-iteration-count: infinite;<br>
+        <br>
+
+        animation-direction<br>
+
+        When the animation iterates, it normally goes from the 0% to the 100% keyframe, jumping back to the 0% when
+        it<br>
+        starts a new iteration.
+        This is the default or normal value for animation-direction. You can use the animation-direction property to<br>
+        change this behavior.  <br>
+        <br>
+        animation-direction: alternate;<br>
+        <br>
+        animation-delay<br>
+        <br>
+        The animation-delay property is used to define how many milliseconds or seconds to wait before the browser<br>
+        begins the animation:
+        <br>
+        animation-delay: 50ms;<br>
+        <br>
+        animation-fill-mode<br>
+        <br>
+        The animation-fill-mode property defines what happens before the first animation iteration begins and after
+        the<br>
+        last animation iteration concludes.
+        <br>
+        animation-fill-mode: both;<br>
+        <br>
+        animation-play-state<br>
+        <br>
+        The animation-play-state property defines whether the animation is running or paused.<br>
+        <br>
+        The Shorthand animation Property  <br>
+        <br>
+        There’s a shorthand for all of these animation properties:<br>
+        <br>
+        .verbose {<br>
+        animation-name: appearDisappear; <br>
+        animation-duration: 300ms; <br>
+        animation-timing-function: ease-in; <br>
+        animation-iteration-count: 1;<br>
+        animation-direction: alternate; <br>
+        animation-delay: 5s;<br>
+        animation-fill-mode: backwards;<br>
+        animation-play-state: running; <br>
+        }<br>
+        <br>
+        /* shorthand */ .concise {<br>
+        animation: 300ms ease-in alternate 5s backwards appearDisappear; <br>
+        }<br>
+
+
+
+    </p>
 </body>
+
 </html>
