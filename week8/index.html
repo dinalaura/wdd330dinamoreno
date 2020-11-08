@@ -255,7 +255,7 @@
         it<br>
         starts a new iteration.
         This is the default or normal value for animation-direction. You can use the animation-direction property to<br>
-        change this behavior.  <br>
+        change this behavior. <br>
         <br>
         animation-direction: alternate;<br>
         <br>
@@ -278,7 +278,7 @@
         <br>
         The animation-play-state property defines whether the animation is running or paused.<br>
         <br>
-        The Shorthand animation Property  <br>
+        The Shorthand animation Property <br>
         <br>
         There’s a shorthand for all of these animation properties:<br>
         <br>
@@ -297,8 +297,284 @@
         animation: 300ms ease-in alternate 5s backwards appearDisappear; <br>
         }<br>
     </p>
+    <h3>Canvas, SVG, and Drag and Drop</h3>
+    <p>
+        Canvas<br>
+        <br>
+        With HTML5’s Canvas API, we can draw anything we can imagine, all through JavaScript.<br>
+        <br>
+        With canvas, we can draw shapes and lines, arcs and text, gradients and patterns.<br>
+        <br>
+        A Bit of Canvas History<br>
+        <br>
+        Canvas was first developed by Apple. Since they already had a framework—Quartz 2D—for drawing in two-dimensional<br>
+        space, they went ahead and based many of the concepts of what woud come to be known as HTML5’s canvas on that<br>
+        framework.
+        <br>
+        Creating a canvas Element<br>
+        <br>
+        The first step to using canvas is to add a canvas element to the page:<br>
+        &lt;&lt;canvas><br>
+        Sorry! Your browser doesn’t support Canvas.<br>
+        &lt;&lt;/canvas><br>
+        The text in between the canvas tags will only be shown if the canvas element is not supported by the visitor’s<br>
+        browser.
+        <br>
+        Since drawing on the canvas is done using JavaScript, we’ll need a way to grab the element from the DOM.<br>
+        <br>
+        &lt;&lt;canvas id="myCanvas" class="myCanvas"> Sorry! Your browser doesn’t support Canvas.<br>
+        &lt;&lt;/canvas><br>
+        <br>
+        Canvas has no default styling, so it’s difficult to see where it is on the page unless you give it some kind of<br>
+        border:
+        <br>
+        .myCanvas {<br>
+        border: dotted 2px black;<br>
+        }<br>
+        <br>
+        Drawing on the Canvas<br>
+        <br>
+        All drawing on the canvas happens via the Canvas JavaScript API. <br>
+        Before we can draw onto a canvas, we need to grab hold of the canvas element on our page:<br>
+        <br>
+        var canvas = document.getElementById("myCanvas");<br>
+        <br>
+        Getting the Context<br>
+        <br>
+        Once we’ve stored our canvas element in a variable, we then set up the canvas’s context. The context is the<br>
+        place where your drawing is rendered.
+        <br>
+        We obtain our drawing context by calling the getContext method and passing it the string "2d", since we’ll be<br>
+        drawing in two dimensions:<br>
+        <br>
+        var canvas = document.getElementById("myCanvas");<br>
+        var context = canvas.getContext("2d");<br>
+        <br>
+        Filling Our Brush with Color<br>
+        <br>
+        strokeStyle and fillStyle are set on a context object, and both take one of three values: a string representing<br>
+        a color, a CanvasGradient object, or a CanvasPattern object.<br>
+        <br>
+        The stroke as the border of the shape you’re going to draw. To draw a rectangle with a red border, we first<br>
+        define the stroke color:<br>
+        <br>
+        var canvas = document.getElementById("myCanvas");<br>
+        var context = canvas.getContext("2d"); <br>
+        context.strokeStyle = "red";<br>
+        <br>
+        We can use any CSS color value to set the stroke or fill color, as long as we specify it as a string<br>
+        <br>
+        Drawing a Rectangle to the Canvas<br>
+        <br>
+        Steps, grabbing the canvas and the context, and setting a fill and stroke style. We’ll draw a rectangle. We can<br>
+        do this by calling the fillRect and strokeRect methods.<br>
+        <br>
+        var canvas = document.getElementById("myCanvas"); <br>
+        var context = canvas.getContext("2d"); <br>
+        context.strokeStyle = "red";<br>
+        context.fillStyle = "rgba(0, 0, 255, 0.5)"; <br>
+        context.fillRect(10, 10, 100, 100); <br>
+        context.strokeRect(10, 10, 100, 100);<br>
+        <br>
+        Variations on fillStyle<br>
+        <br>
+        Instead of a color as our fillStyle, we could have used a CanvasGradient or a CanvasPattern object.<br>
+        <br>
+        We create a CanvasPattern by calling the createPattern method. createPattern takes two parameters: the image to<br>
+        create the pattern with, and how that image should be repeated.<br>
+        <br>
+        We can also create a CanvasGradient object to use as our fillStyle. To create a CanvasGradient, we call one of<br>
+        two methods: createLinearGradient() or creat- eRadialGradient(); then we add one or more color stops to the<br>
+        gradient.<br>
+        <br>
+        Drawing Other Shapes by Creating Paths<br>
+        <br>
+        Paths create a blueprint for your lines, arcs, and shapes, but paths are invisible until you give them a stroke,<br>
+        we need to take three steps:layout the path, stroke the path, and fill the path.<br>
+        The first step is to begin the path of the circle. We do that with the method beginPath(), which resets the<br>
+        default path for you to begin drawing a new shape:<br>
+        <br>
+        function drawCircle(canvas) {<br>
+        var context = canvas.getContext("2d");<br>
+        context.beginPath();<br>
+        }<br>
+        <br>
+        Now we need to create an arc. An arc is a segment of a circle, but as there’s no method for creating a circle,<br>
+        we can draw a 360° arc. We create it using the arc method:<br>
+        <br>
+        function drawCircle(canvas) {<br>
+        var canvas = document.getElementById("myCanvas"); <br>
+        var context = canvas.getContext("2d"); <br>
+        context.beginPath();<br>
+        context.arc(50, 50, 30, 0, Math.PI*2, true);<br>
+        }<br>
+        <br>
+        Our next step is to close the path, as we’ve now finished drawing our circle. We do that with the closePath<br>
+        method:<br>
+        <br>
+        function drawCircle(canvas) {<br>
+        var context = canvas.getContext("2d"); context.beginPath();<br>
+        context.arc(100, 100, 50, 0, Math.PI*2, true); context.closePath();<br>
+        }<br>
+        <br>
+        Saving Canvas Drawings<br>
+        <br>
+        If we create an image programmatically using the Canvas API, but decide we’d like to have a local copy of our<br>
+        drawing, we can use the API’s toDataURL method to save our drawing.<br>
+        <br>
+        Drawing an Image to the Canvas<br>
+        <br>
+        We can also draw images onto the canvas element. <br>
+        <br>
+        Example<br>
+        &lt;&lt;h2>Demo 6: Drawing an image to the canvas &lt;&lt;/h2><br>
+        &lt;&lt;canvas width="200" height="200" id="demo6" class="myCanvas"><br>
+        Sorry! Your browser doesn't support Canvas.<br>
+        <br>
+        &lt;&lt;/canvas><br>
+        &lt;&lt;img src="images/html5-logo.png" id="myImageElem"><br>
+        <br>
+        Manipulating Images<br>
+        <br>
+        Once we’ve drawn an image on the canvas, we can use the getImageData method from the Canvas API to manipulate<br>
+        the pixels of that image.<br>
+        <br>
+        getImageData will return an ImageData object, which contains three properties: width, height, and data.<br>
+        Example<br>
+        var canvas = document.getElementById("myCanvas"); var context = canvas.getContext("2d");<br>
+        var image = document.getElementById("myImageElem"); // draw the image at x=0 and y=0 on the canvas<br>
+        context.drawImage(image, 68, 68);<br>
+        var imageData = context.getImageData(0, 0, 1, 1); var pixelData = imageData.data;<br>
+        console.log(pixelData.length);<br>
+        <br>
+        Security Errors with getImageData<br>
+        <br>
+        Information leakage can occur if scripts from one domain can access information (e.g. read pixels) from images<br>
+        from another domain (this is called a cross-origin request). To mitigate this, canvas ele- ments are defined<br>
+        with a flag indicating whether they are origin- clean.<br>
+        Converting an Image from Color to Black and White<br>
+        <br>
+        First, we’ll call getImageData(0, 0, 200, 200) to retrieve the entire canvas. Then, we’ll grab the red, green,<br>
+        and blue values of each pixel, which appear in the array in that order:<br>
+        <br>
+        function manipulateImage() {<br>
+        var canvas = document.getElementById("demo7");<br>
+        var context = canvas.getContext("2d");<br>
+        var image = document.getElementById("secondImage"); context.drawImage(image, 68, 68);<br>
+        var imageData = context.getImageData(0, 0, 200, 200);<br>
+        var red, green, blue, greyscale;<br>
+        for (var i = 0; i &lt;&lt; imageData.data.length; i += 4) { red = imageData.data[i];<br>
+        green = imageData.data[i + 1];<br>
+        blue = imageData.data[i + 2];<br>
+        } <br>
+        }<br>
+        Manipulating Video with Canvas<br>
+        <br>
+        Example<br>
+        function draw(video, context, canvas) {<br>
+        if (video.paused || video.ended) return false;<br>
+        drawOneFrame(video, context, canvas);<br>
+        // Start over!<br>
+        setTimeout(function(){ draw(video, context, canvas); }, 0);<br>
+        }<br>
+        <br>
+        Displaying Text on the Canvas<br>
+        <br>
+        Example<br>
+        function draw(video, context, canvas) {<br>
+        if (video.paused || video.ended) return false;<br>
+        drawOneFrame(video, context, canvas);<br>
+        // Start over!<br>
+        setTimeout(function(){ draw(video, context, canvas); }, 0);<br>
+        }<br>
+        <br>
+        Accessibility Concerns<br>
+        <br>
+        A major downside of canvas in its current form is its lack of accessibility. The canvas doesn’t create a DOM<br>
+        node, is not a text-based format, and is thus essentially invis- ible to tools such as screen readers.<br>
+    </p>
 
-    
+    <h3>SVG</h3>
+    <p>
+        SVG stands for Scalable Vector Graphics, a specific file format that allows you to describe vector graphics<br>
+        using XML. A major selling point of vector graphics in general is that, unlike bitmap images<br>
+        vector images preserve their quality even as you blow them up or shrink them down. Images created with SVG are<br>
+        available via the DOM. This enables technologies such as screen readers to see what’s present in an SVG object<br>
+        through its DOM node.
+        <br>
+        Drawing in SVG<br>
+        <br>
+        Drawing a circle in SVG is arguably easier than drawing a circle with canvas. Here’s how we do it:<br>
+        <br>
+        &lt;&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"> &lt;&lt;circle cx="50" cy="50" r="25"<br>
+        fill="red"/>
+        &lt;&lt;/svg><br>
+        We can use an image editor to help. One open source tool that you can use to make SVG images is Inkscape.<br>
+        SVG Filters<br>
+        <br>
+        To add one go to Inkscape, then choose Filters > Color > Moonarize.<br>
+        Or instead modify the color of the original image we can do this in Inkscape selecting Object > Fill and Stroke.<br>
+        Using the Raphaël Library<br>
+        <br>
+        Raphaël is an open-source JavaScript library that makes drawing and animating with SVG much easier.<br>
+        Drawing an Image to Raphaël’s Container<br>
+        Much as with canvas, you can draw images into a container that you create using Raphaël.<br>
+        <br>
+        Examplefunction determineLocation() { if (navigator.onLine) {<br>
+        if (Modernizr.geolocation) { navigator.geolocation.getCurrentPosition(displayOnMap);<br>
+        var container = Raphael(document.getElementById("spinner"), ➥125, 125);<br>
+        <br>
+        Rotating a Spinner with Raphaël<br>
+        <br>
+        var container = Raphael(document.getElementById("spinner"),125,125); <br>
+        var spinner = container.image("images/spinnerBW.png",0,0,125,125); <br>
+        var attrsToAnimate = { transform: "r720" };<br>
+        <br>
+        <a href="https://codepen.io/Dina-Laura/pen/JjKZdMq">SVG EXAMPLE CODEPEN</a>
+        <br>
+        Canvas versus SVG<br>
+        <br>
+        Both canvas and SVG allow you to draw custom shapes, paths, and fonts. Canvas allows for pixel manipulation. One<br>
+        downside of canvas is that it operates in what’s known as immediate mode.<br>
+        There’s also no access to what’s drawn on the canvas via the DOM. <br>
+        <br>
+        By contrast, what you draw to SVG is accessible via the DOM, because its mode is retained mode, SVG also has, at<br>
+        this time, a more complete set of tools to help you work with it.<br>
+    </p>
+
+    <h3>Drag and Drop</h3>
+    <p>
+        The Drag and Drop API allows us to specify that certain elements are draggable, and then specify what should<br>
+        happen when these draggable elements are dragged over or dropped onto other elements on the page.<br>
+        The API is unsupported by Android. It is also unsupported by design in iOS, as Apple directs you to use the DOM<br>
+        Touch API instead.<br>
+        <br>
+        There are two major kinds of functionality you can implement with Drag and Drop: dragging files from your<br>
+        computer into a web page—in combination with the File API—or dragging elements into other elements on the same<br>
+        page.<br>
+        <br>
+        There are several steps to adding drag and drop to your page:<br>
+        <br>
+        1. Set the draggable attribute on any HTML elements you’d like to be draggable.<br>
+        2. Add an event listener for the dragstart event on any draggable HTML elements.<br>
+        3. Add an event listener for the dragover and drop events on any elements that you want to have accept dropped<br>
+        items.
+        <br>
+        Making Elements Draggable<br>
+        &lt;&lt;img src="images/computer-mouse-pic.svg" width="30" ➥alt="mouse treat" id="mouse1" draggable="true"> <br>
+        &lt;&lt;img src="images/computer-mouse-pic.svg" width="30"<br>
+        ➥alt="mouse treat" id="mouse2" draggable="true"> <br>
+        &lt;&lt;img src="images/computer-mouse-pic.svg" width="30" ➥alt="mouse treat" id="mouse3" draggable="true"><br>
+        <br>
+        The DataTransfer Object<br>
+        <br>
+        DataTransfer objects are one type of object outlined in the Drag and Drop API. These objects allow us to set and<br>
+        get data about the elements that are being dragged. Spe- cifically, DataTransfer lets us define two pieces of<br>
+        information:<br>
+        <br>
+        ■ the type of data we’re saving of the draggable element<br>
+        ■ the value of the data itself<br>
+    </p>
 </body>
 
 </html>
