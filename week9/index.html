@@ -1,21 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W09 Notes WDD 330</title>
     <link rel="stylesheet" href="../css/main.css">
 </head>
+
 <body>
     <h1>WDD 330: Portfolio</h1>
     <h2>Team Work</h2>
     <p><a href="index-START.html">DRUM KIT ACTIVITY</a></p>
     <h2>Managing the modern Front-end workflow</h2>
     <div>
-    <img src="screen1.png" alt="ScreenShot" > 
-    <img src="screen2.png" alt="ScreenShot" > 
-    <img src="screen3.png" alt="ScreenShot" > 
-</div>
+        <img src="screen1.png" alt="ScreenShot">
+        <img src="screen2.png" alt="ScreenShot">
+        <img src="screen3.png" alt="ScreenShot">
+    </div>
     <h2>W09 Notes from JavaScript: Novice to Ninja</h2>
+    <h3>The Window Object</h3>
+    <p>
+        Every JavaScript environment has a global object. Any variables that are created in the global scope are<br>
+        actually properties of this object, and any functions are methods of it.<br>
+        <br>
+        The Browser Object Model<br>
+        <br>
+        The Browser Object Model (or BOM for short) is a collection of properties and methods that contain<br>
+        information about the browser and computer screen.<br>
+        There is no official standard for the BOM, although there are a number of properties and methods that are<br>
+        supported by all the major browsers, making a sort of de facto standard.<br>
+        <br>
+        Dialogs<br>
+        <br>
+        Three functions that produced dialogs in the browsers: alert(), confirm() and prompt(). These are not part
+        of<br>
+        the ECMAScript standard, although all major browsers support them as methods of the window object.<br>
+        <br>
+        Browser Information<br>
+        <br>
+        The window object has a number of properties and methods that provide information about the user’s browser.<br>
+        <br>
+        The window object has a navigator property that returns a reference to the Navigator object. The Navigator<br>
+        object contains information about the browser being used.<br>
+        <br>
+        The Browser History<br>
+        <br>
+        The window.history property can be used to access information about any previously visited pages in the
+        current<br>
+        browser session
+        <br>
+        The window.history.length property shows how many pages have been visited before arriving at the current
+        page.<br>
+        <br>
+        The window.history.go() method can be used to go to a specific page, where 0 is the current page:<br>
+        <br>
+        window.history.go(1); // goes forward 1 page window.history.go(0); // reloads the current page<br>
+        window.history.go(-1); // goes back 1 page<br>
+        <br>
+        Controlling Windows<br>
+        <br>
+        A new window can be opened using the window.open() method. This takes the URL of the page to be opened as<br>
+        its first parameter, the window title as its second parameter, and a list of attributes as the third parameter.<br>
+        <br>
+        const popup = window.open('https://sitepoint.com',' SitePoint','width=400,height=400,resizable=yes');<br>
+        <br>
+        The close() method can be used to close a window, assuming you have a reference to it:<br>
+        <br>
+        popup.close();<br>
+        <br>
+        Screen Information<br>
+        <br>
+        The window.screen object contains information about the screen the browser is displayed on. You can find out<br>
+        the height and width of the screen in pixels using the height and width properties respectively:<br>
+        <br>
+        window.screen.height &lt;&lt; 1024<br>
+        window.screen.width &lt;&lt; 1280<br>
+        <br>
+        The Document Object<br>
+        <br>
+        Each window object contains a document object. This object has properties and methods that deal with the
+        page<br>
+        that has been loaded into the window.<br>
+        <br>
+        document.write()<br>
+        <br>
+        The write() method simply writes a string of text to the page. If a page has already loaded, it will
+        completely<br>
+        replace the current document:<br>
+        <br>
+        document.write('Hello, world!');<br>
+        <br>
+        Cookies<br>
+        <br>
+        Cookies are small files that are saved locally on a user’s computer. They were invented by Netscape as a way<br>
+        of getting round HTTP being a stateless protocol. This means that a browser does not remember anything from one<br>
+        request to another. So every time a user visits a page, nothing about any previous visits is remembered.
+        Cookies<br>
+        can be used to sidestep this problem by storing information that can then be retrieved between requests.<br>
+        <br>
+        The use of cookies for tracking purposes has been much maligned in recent years. Their use for data storage
+        is<br>
+        starting to be replaced in many cases by the new HTML5 localStorage API as it allows more data to be stored.<br>
+        <br>
+        Creating Cookies<br>
+        <br>
+        To create a cookie, you assign it to JavaScript’s 'cookie jar', using the document.cookie property, like so:<br>
+        <br>
+        document.cookie = 'name=Superman'; <br>
+        &lt;&lt; "name=Superman"<br>
+        <br>
+        Reading Cookies<br>
+        <br>
+        To see the current contents of the cookie jar, simply enter document.cookie:<br>
+        <br>
+        document.cookie:<br>
+        &lt;&lt; "name=Batman; <br>
+        hero=true; <br>
+        city=Gotham"<br>
+        <br>
+        Cookies can be made persistent ― that is, lasting beyond the browser session ― by adding "; expires=date" to<br>
+        the end of the cookie when it’s set, where date is a date value in the UTC String format Day, DD-Mon-YYYY<br>
+        HH:MM:SS GMT. <br>
+        The following example sets a cookie to expire in one day’s time:<br>
+        <br>
+        const expiryDate = new Date();<br>
+        const tomorrow = expiryDate.getTime() + 1000 * 60 * 60 * 24;<br>
+        expiryDate.setTime(tomorrow);<br>
+        document.cookie = `name=Batman; expires=${ ➥ expiryDate.toUTCString()}`;<br>
+        <br>
+        Animation<br>
+        <br>
+        The setTimeout() and setInterval() methods can be used to animate elements on a web page.<br>
+        <br>
+        requestAnimationFrame<br>
+        <br>
+        This method of the window object works in much the same way as the window.setInterval() method, although it has<br>
+        a number of improvements to optimize its performance.
+
+        <a href="https://codepen.io/Dina-Laura/pen/qBNgvOj">CODE PEN PROJECT</a>
+    </p>
+
+    <h3>HTML5 APIs</h3>
+    <p>
+        HTML5 is the latest version of the Hypertext Markup Language used to create web pages. <br>
+        <br>
+        HTML5<br>
+        <br>
+        The W3C plans to develop future versions of HTML5 much more frequently than previously, using smaller<br>
+        version increments. <br>
+        HTML 5.1 has already become the latest standard, and HTML 5.2 is in development.<br>
+        <br>
+        The HTML5 specification is separated into modules that allow different features to be developed at different<br>
+        paces then implemented without having to wait for other features to be completed.<br>
+        <br>
+        The data- Attribute<br>
+        <br>
+        The data- attribute is a way of embedding data in a web page using custom attributes that are ignored by the<br>
+        browser.
+        <br>
+        The names of these attributes can be decided by the developer, but they must use the following format:<br>
+        Start with data-.<br>
+        Contain only lowercase letters, numbers, hyphens, dots, colons or underscores.<br>
+        Include an optional string value.<br>
+        <br>
+         Examples could be:<br>
+        <br>
+        data-powers = 'flight superSpeed' data-rating = '5'<br>
+        data-dropdown<br>
+        data-user = 'DAZ'<br>
+        data-max-length = '32'<br>
+        <br>
+        HTML5 APIs<br>
+        <br>
+        The HTML5 specification contains a number of APIs that help to gain access to hardware, such as cameras,<br>
+        batteries, geolocation, and the graphics card. Hardware evolves quickly, and APIs are frequently introduced<br>
+        to give developers access, and control new features that appear in the latest devices.<br>
+        <br>
+        HTML5 Web Storage<br>
+        <br>
+        The Web Storage API provides a key-value store on the client’s computer that is similar to using cookies but<br>
+        hasfewer restrictions, more storage capacity, and is generally easier to use.<br>
+        The Web Storage API has some crucial differences with cookies: Information stored is not shared with the<br>
+        server on every request.<br>
+        <br>
+        Information is available in multiple windows of the browser (but only if the domain is the same).<br>
+        Storage capacity limit is much larger than the 4KB limit for cookies4.<br>
+        Any data stored does not automatically expire as it does with cookies. This potentially makes cookies a<br>
+        better choice for something like showing a popup once a day.<br>
+        <br>
+        Geolocation<br>
+        <br>
+        The Geolocation API is used to obtain the geographical position of the device. This means it can be used to find<br>
+        the user’s exact location, then link to nearby places or measure the speed at which the user is moving.<br> This
+        information can then be used to filter data based on the user’s location or speed and direction of travel<br>
+        <br>
+        Web Workers<br>
+        <br>
+        Web workers allow processes to be run in the background, adding support for concurrency in JavaScript. <br>The
+        idea is that any processes that could take a long time are carried out in the background, so a website will<br>
+        continue  to function without fear of the dreaded “script has become unresponsive” message that occurs when a script<br>
+        runs for too long.<br>
+        <br>
+        To get started, use the Worker() constructor function to create a new worker:<br>
+        <br>
+        const worker = new Worker('task.js');<br>
+        <br>
+        Websockets<br>
+        <br>
+        The main form of communication on the web has always been the HTTP protocol. This uses a system of request<br>
+        and response to send data back and forth. A problem with this method of communication is when you only get a<br>
+        response when a request is sent.<br>
+        <br>
+        Websocket is a new protocol that allows two-way communication with a server – also known as push messaging.<br>
+        This means that a connection is kept open and responses are ‘pushed’ to the client as soon as they are
+        received.<br>
+        <br>
+        Notifications<br>
+        <br>
+        The Notification API allows you to show messages using the system’s notifications.<br>
+        <br>
+        Multimedia<br>
+        <br>
+        Before HTML5, it was notoriously difficult to display audio and video in browsers, and plugins such as Flash<br>
+        often had to be used. HTML5 introduced the &lt;audio> and &lt;video> tags used to insert audio and video<br>
+        clips into a web page.<br>
+        <br>
+        An audio clip can be inserted into a page with the &lt;audio> tag, using the src attribute to point to the<br>
+        audio file:<br>
+        <br>
+        &lt;audio src='/song.mp3' controls><br>
+        Your browser does not support the audio element. &lt;/audio><br>
+        <br>
+        Drawing with Canvas<br>
+        <br>
+        The canvas element was introduced to allow graphics to be drawn onto a web page in real time using<br>
+        JavaScript. A canvas element is a rectangular element on the web page. It has a coordinate system that<br>
+        starts at (0,0) in the top-left corner. To add a canvas element to a page, the &lt;canvas> <br>
+        tag is used specifying a height and width.<br>
+        <br>
+        Shims and Polyfills<br>
+        <br>
+        These are libraries of code that allow you to use the APIs as usual. They then fill in the necessary code<br>
+        that’s not provided natively by the user’s browser.<br>
+        The terms shim and polyfill are often used interchangeably. The main difference between them is that a shim is<br>
+        a piece of code that adds some missing functionality to a browser, although the implementation method may<br>
+        differ slightly from the standard API. A polyfill is a shim that achieves the same functionality, while also using<br>
+        the API commands that would be used if the feature was supported natively.<br>
+        <br>
+<a href="https://codepen.io/Dina-Laura/pen/WNxPmQB">
+CODE PEN PROJECT
+</a>       
+ <br> 
+  <br>
+    </p>
+
 </body>
+
 </html>
