@@ -40,3 +40,9 @@ p {
     margin-left: 15em;
     line-height: 1.5em;
 }
+div img{
+    height:200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
