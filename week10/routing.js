@@ -6,11 +6,6 @@ const routes = [
     file: 'views/quakeList.html',
     label: 'Local Quakes'
   },
-  {
-    controller: new QuakesController('#quakeList'),
-    file: 'views/quakeList.html',
-    label: 'Yellowstone Quakes'
-  }
 ];
 
 export default function buildNavigation(parent) {
