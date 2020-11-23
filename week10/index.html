@@ -74,79 +74,79 @@
 </p>
 <h3></h3>
 <p>
-    The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses. 
-
-The fetch specification differs from jQuery.ajax() in three main ways: 
-
-The Promise returned from fetch() won’t reject on HTTP error status even if the response is an HTTP 404 or 500. 
-
-fetch() can receive cross-site cookies 
-
-fetch won’t send cookies, unless you set the credentials init option. 
-
- 
-
-A basic fetch request is really simple to set up. 
-
-fetch('http://example.com/movies.json') .then(response => response.json()) .then(data => console.log(data)); 
-
- 
-
-Here we are fetching a JSON file across the network and printing it to the console. The simplest use of fetch() takes one argument — the path to the resource you want to fetch — and returns a promise containing the response (a Response object). 
-
- 
-
-The fetch() method can optionally accept a second parameter, an init object that allows you to control a number of different settings 
-
-Sending a request with credentials included 
-
- 
-
-To cause browsers to send a request with credentials included, even for a cross-origin call, add credentials: 'include' to the init object you pass to the fetch() method. 
-
-Uploading JSON data 
-
-Use fetch() to POST JSON-encoded data. 
-
-Uploading a file 
-
-Files can be uploaded using an HTML &lt;input type="file" /> input element, FormData() and fetch(). 
-
-Uploading multiple files 
-
-Files can be uploaded using an HTML &lt;input type="file" multiple /> input element, FormData() and fetch(). 
-
- 
-
-Request() accepts exactly the same parameters as the fetch() method. You can even pass in an existing request object to create a copy of it: 
-
-const anotherRequest = new Request(myRequest, myInit); 
-
-Guard 
-
-Since headers can be sent in requests and received in responses, and have various limitations about what information can and should be mutable, headers objects have a guard property. This is not exposed to the Web, but it affects which mutation operations are allowed on the headers object. 
-
-Possible guard values are: 
-
-    none: default. 
-
-    request: guard for a headers object obtained from a request (Request.headers). 
-
-    request-no-cors: guard for a headers object obtained from a request created with Request.mode no-cors. 
-
-    response: guard for a Headers obtained from a response (Response.headers). 
-
-    immutable: Mostly used for ServiceWorkers; renders a headers object read-only. 
-
-Feature detection 
-
-Fetch API support can be detected by checking for the existence of Headers, Request, Response or fetch() on the Window or Worker scope. For example: 
-
-if (window.fetch) { // run my fetch request here } else { // do something with XMLHttpRequest? } 
-
-Polyfill 
-
-To use Fetch in unsupported browsers, there is a Fetch Polyfill available that recreates the functionality for non-supporting browsers. 
+    The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline,<br>
+     such as requests and responses. <br>
+     <br>
+The fetch specification differs from jQuery.ajax() in three main ways: <br>
+<br>
+The Promise returned from fetch() won’t reject on HTTP error status even if the response is an HTTP 404 or 500. <br>
+<br>
+fetch() can receive cross-site cookies <br>
+<br>
+fetch won’t send cookies, unless you set the credentials init option. <br>
+<br>
+A basic fetch request is really simple to set up. <br>
+<br>
+fetch('http://example.com/movies.json') .then(response => response.json()) .then(data => console.log(data)); <br>
+<br>
+Here we are fetching a JSON file across the network and printing it to the console. <br>
+The simplest use of fetch() takes one argument — the path to the resource you want to fetch — <br>
+and returns a promise containing the response (a Response object). <br>
+<br>
+The fetch() method can optionally accept a second parameter,<br>
+an init object that allows you to control a number of different settings <br>
+<br>
+Sending a request with credentials included <br>
+<br>
+To cause browsers to send a request with credentials included, even for a cross-origin call,<br>
+ add credentials: 'include' to the init object you pass to the fetch() method. <br>
+ <br>
+Uploading JSON data <br>
+<br>
+Use fetch() to POST JSON-encoded data. <br>
+<br>
+Uploading a file <br>
+<br>
+Files can be uploaded using an HTML &lt;input type="file" /> input element, FormData() and fetch().<br> 
+<br>
+Uploading multiple files <br>
+<br>
+Files can be uploaded using an HTML &lt;input type="file" multiple /> input element, FormData() and fetch(). <br>
+<br>
+Request() accepts exactly the same parameters as the fetch() method. <br>
+You can even pass in an existing request object to create a copy of it: <br>
+<br>
+const anotherRequest = new Request(myRequest, myInit); <br>
+<br>
+Guard <br>
+<br>
+Since headers can be sent in requests and received in responses, <br>
+and have various limitations about what information can and should be mutable, headers objects have a guard property.<br>
+ This is not exposed to the Web, but it affects which mutation operations are allowed on the headers object. <br>
+ <br>
+Possible guard values are: <br>
+<br>
+    none: default. <br>
+    <br>
+    request: guard for a headers object obtained from a request (Request.headers). <br>
+    <br>
+    request-no-cors: guard for a headers object obtained from a request created with Request.mode no-cors. <br>
+    <br>
+    response: guard for a Headers obtained from a response (Response.headers). <br>
+    <br>
+    immutable: Mostly used for ServiceWorkers; renders a headers object read-only. <br>
+    <br>
+Feature detection <br>
+<br>
+Fetch API support can be detected by checking for the existence of Headers, Request, <br>
+Response or fetch() on the Window or Worker scope. For example: <br>
+<br>
+if (window.fetch) { // run my fetch request here } else { // do something with XMLHttpRequest? } <br>
+<br>
+Polyfill <br>
+<br>
+To use Fetch in unsupported browsers, there is a Fetch Polyfill available <br>
+that recreates the functionality for non-supporting browsers. 
 </p>
 </body>
 </html>
