@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Web Frontend Development II at Brigham Young University - Idaho.">
+    <title>Open Weather API</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/medium.css">
+    <link rel="stylesheet" href="css/large.css">
+</head>
+
+<body>
+    <header>
+        <section class="headings">
+            <h1>Open Weather API</h1>
+        </section>
+    </header>
+    <nav>
+        <ul class="navigation" id="lista">
+            <li class="btn active"><a href="preston-10.html">Preston</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Preston Idaho</h2>
+            <div id="firstsection">
+
+                <picture>
+                    <source srcset="images/large.jpg" media="(min-width: 800px)">
+                    <source srcset="images/medium.jpg" media="(min-width:480px) and (max-width: 799px)">
+                    <img src="images/small.jpg" alt="Preston Idaho" id="heroimage">
+                </picture>
+
+                <div id="overlay" class="summary">
+                    <h3>Weather Summary &#9788;</h3>
+                    <div class="details">
+                     
+                        <div class="label">Currently:</div>
+                        <div class="value" id="condition"></div>
+                        <div class="label">Current:</div>
+                        <div class="value" id="temp"></div>
+                        <div class="label">High:</div>
+                        <div class="value" id="high"></div>
+                        <div class="label">Wind Chill:</div>
+                        <div class="value" id="windchill"></div>
+                        <div class="label">Humidity:</div>
+                        <div class="value" id="humidity"></div>
+                        <div class="label">Wind Speed:</div>
+                        <div class="value" id="speed"></div>
+                    
+                    </div>
+                </div>
+            </div>
+        </section>
+
+ 
+        <section id="hide">
+
+            <h3>5 Day Forecast</h3>
+
+
+            <div class="grid-container">
+                <div class="grid-header" id="dayofweek1"></div>
+                <div class="grid-header" id="dayofweek2"></div>
+                <div class="grid-header" id="dayofweek3"></div>
+                <div class="grid-header" id="dayofweek4"></div>
+                <div class="grid-header" id="dayofweek5"></div>
+                <div class="grid-image">
+                    <img src="#" alt="" id="icon1">
+                </div>
+                <div class="grid-image">
+                    <img src="#" alt="" id="icon2">
+                </div>
+                <div class="grid-image">
+                    <img src="#" alt="" id="icon3">
+                </div>
+                <div class="grid-image">
+                    <img src="#" alt="" id="icon4">
+                </div>
+                <div class="grid-image">
+                    <img src="#" alt="" id="icon5">
+                </div>
+                <div class="grid-f" id="forecast1">&deg;F</div>
+                <div class="grid-f" id="forecast2">&deg;F</div>
+                <div class="grid-f" id="forecast3">&deg;F</div>
+                <div class="grid-f" id="forecast4">&deg;F</div>
+                <div class="grid-f" id="forecast5">&deg;F</div>
+            </div>
+
+        </section>
+        <div id="searchContainer">
+            <input class="searchControl" type="text" placeholder="City Name" id="searchInput">
+            <button class="searchControl" id="searchBtn">Search</button>
+        </div>
+    </main>
+    <footer>
+        &copy; Attributions | Open Weather API
+        <br>
+        <span id="date"></span>
+    </footer>
+    <script src="script/forecast.js"></script>
+    <script src="script/copy.js"></script>
+    <script src="script/windchill.js"></script>
+</body>
+
+</html>

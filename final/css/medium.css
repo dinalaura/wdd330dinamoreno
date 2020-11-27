@@ -1,0 +1,133 @@
+@media only screen and (min-width: 30em) {
+
+	.box {
+		max-width: 520px;
+		;
+	}
+
+	#firstsection {
+		max-width: 520px;
+		margin-bottom: auto;
+
+	}
+
+	/*forecast *************************************************************/
+
+	#hide,
+	grid-container,
+	grid-item {
+		display: grid;
+	}
+
+	#hide {
+		margin-bottom: 2em;
+	}
+
+	#hide h3 {
+		text-align: center;
+	}
+
+	.grid-container {
+		display: grid;
+		grid-template-columns: auto auto auto auto auto;
+		background-color: burlywood;
+		padding: 2px;
+		max-width: 520px;
+		margin-left: auto;
+		margin-right: auto;
+
+	}
+
+
+	.grid-header {
+		background-color: rgba(236, 219, 219, 0.8);
+		border: 1px solid rgba(0, 0, 0, 0.8);
+		padding: 20px;
+		text-align: center;
+		font-weight: bold;
+	}
+
+	.grid-image {
+		background-color: rgba(236, 219, 219, 0.8);
+		padding: 20px 20px 5px 20px;
+		text-align: center;
+		border-left: 1px solid rgba(0, 0, 0, 0.8);
+		border-right: 1px solid rgba(0, 0, 0, 0.8);
+	}
+
+	.grid-f {
+		background-color: rgba(236, 219, 219, 0.8);
+		border: 1px solid rgba(0, 0, 0, 0.8);
+		border-top: none;
+		padding: 5px 20px 20px 20px;
+		text-align: center;
+	}
+
+	/*end of forecast **************************************************************************/
+
+	#article {
+		display: block;
+		margin: 10px auto 10px auto;
+	}
+
+	#article img {
+		float: right;
+		border: 1px solid #bbb;
+		padding: .25rem;
+		margin: .5rem .25rem .5rem 1.25rem;
+	}
+
+	#bottombox {
+		margin-bottom: 0px;
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: left;
+	}
+
+	#address {
+		text-align: left;
+	}
+
+
+	/*Header */
+	header img {
+		width: 80%;
+	}
+
+	.headings h1 {
+		font-size: 2rem;
+	}
+
+	.m {
+		letter-spacing: 1.5pt;
+		font-size: larger;
+		margin-left: 17px;
+	}
+
+	/*End of header*/
+
+
+	/* Navigation */
+	.navigation {
+		display: flex;
+	}
+
+	.navigation li {
+		display: block;
+		flex: 1 1 auto;
+	}
+
+	.navigation a {
+		text-align: center;
+	}
+
+	.navigation li:first-child {
+		display: none;
+	}
+
+	/*End of navigation***************/
+
+
+
+
+}
