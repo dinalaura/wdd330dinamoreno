@@ -6,7 +6,7 @@ function output() {
 
     let output = windChill(tempF, speed);
 
-    document.getElementById("windchill").textContent = output;
+    document.getElementById("windchill").textContent = "Wind Chill:" + output;
 }
 
 function windChill(tempF, speed) {

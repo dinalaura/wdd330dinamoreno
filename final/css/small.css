@@ -1,263 +1,125 @@
-/*headings********************/
+
+h2 {
+  text-align: center;
+}
+
+#firstsection {
+  display: block;
+  margin: 10px auto;
+  position: relative;
+  margin-bottom: 3.5em;
+}
+
+#heroimage {
+  display: block;
+  margin: 10px auto;
+  width: 100%;
+}
+
+/* summary*********************/
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: .25rem;
+}
+
+.details .label {
+  text-align: right;
+}
+
+.details .value {
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-    font-family: 'Ubuntu', sans-serif;
-    background-color: #bbb;
-    padding: 0;
-    margin: 0;
-  }
-  
-  header {
-    background-color: #407899;
-    color: white;
-    padding: 5px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  header img {
-    width: 80px;
-    height: auto;
-  }
-  
-  .headings {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .headings h1 {
-    font-size: 1.6rem;
-    margin: 0 0 0 17px;
-  }
-  
-  .motto {
-    font-style: italic;
-    letter-spacing: 1pt;
-    margin-left: 20px;
-    font-size: .9rem;
-  }
-  
-  /*End of headings*************/
-  
-  
-  /* Navigation ******************************************/
-  nav {
-    margin: 0 auto;
-  }
-  
-  nav ul {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navigation {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .navigation li:first-child {
-    display: block;
-  }
-  
-  .navigation li {
-    display: none;
-  }
-  
-  .navigation a {
-    display: block;
-    padding: 0.75rem;
-    text-align: center;
-    text-decoration: none;
-    color: #000000;
-    font-weight: 700;
-  }
-  
-  .responsive li {
-    display: block;
-  }
-  
-  
-  
-  
-  /************** buttons */
-  .btn {
-    border: none;
-    outline: none;
-    background-color: #deb887;
-    cursor: pointer;
-  }
-  
-  /* Active class***********/
-  .active {
-    background-color: rgb(228, 204, 174);
-    color: black;
-  }
-  
-  
-  /************ mouse-over ******/
-  nav a:hover {
-    color: white;
-    background-color: black;
-  
-  }
-  
-  /************* End of Navigation *********************************/
-  
-  
-  h2 {
-    text-align: center;
-  }
-  
-  
-  .box {
-    display: block;
-    margin: 10px auto;
-    border: 2px dashed purple;
-    padding: 15px;
-    background-color: rgba(255, 127, 80, .80);
-  }
-  
-  #firstsection {
-    display: block;
-    margin: 10px auto;
-    position: relative;
-    margin-bottom: 3.5em;
-  }
-  
-  #heroimage {
-    display: block;
-    margin: 10px auto;
-    width: 100%;
-  }
-  
-  /* summary*********************/
-  .details {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: .25rem;
-  }
-  
-  .details .label {
-    text-align: right;
-  }
-  
-  .details .value {
-    color: #FFFF6B;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    max-width: 60em;
-    margin: 0 auto;
-  }
-  
-  .summary {
-    background: #407899;
-    border: 1px solid #777;
-    padding: 0 .75rem 1rem;
-    color: #ffffff;
-    box-shadow: 0 0 40px #444;
-    width: 300px;
-    margin: 20px auto;
-  }
-  
-  .summary h3 {
-    border-bottom: .5px solid #ffffff;
-    padding-bottom: 2px;
-    margin: 5px 5px 10px 5px;
-  }
-  
-  .summary div {
-    line-height: 1.2;
-    padding: .1rem;
-    margin: 0;
-  }
-  
-  /***End of summary********************************/
-  #overlay {
-    position: absolute;
-    top: 5px;
-    left: 40px;
-    border: 1px solid #000;
-    padding: .5rem;
-    box-shadow: 0 0 30px #111;
-    opacity: .85;
-  
-  }
-  
-  #article {
-    display: flex;
-    flex-direction: column-reverse;
-    margin: 70px auto 10px auto;
-  
-  }
-  
-  #article img {
-    max-width: 100%;
-  
-  }
-  
-  #article a {
-    font-size: small;
-  }
-  
-  
-  #hide,
-  grid-container,
-  grid-item {
-    display: none;
-  }
-  
-  #map img {
-    width: 100%;
-  }
-  
-  #address {
-    padding: 1em;
-    margin: 1em;
-    text-align: center;
-  }
-  
-  footer {
-    background-color: rgb(64, 120, 153);
-    text-align: center;
-    padding: .5rem;
-    color: white;
-  }
-  
-  footer a {
-    color: white;
-  }
-  
-  /* Banner *****************************************/
-  #banner {
-    display: none;
-    text-align: center;
-    padding: 0.75rem;
-    box-shadow: 0 0 30px #111;
-    background: radial-gradient(#fffaf3, #deb887);
-    /*opacity: 2;*/
-    font-weight: bold;
-  }
-  
-  /* End of Banner *****************************************/
-  
-  
-  /****Social media icons***************************/
-  
-  .icon-container {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    padding: 4px;
-  }
-  
-  .icon {
-    padding: 0px;
-    text-align: center;
-  }
-  
-  
-  /**** End of Social media icons***************************/
+  max-width: 60em;
+  margin: 0 auto;
+}
+
+.summary {
+  background: #407899;
+  border: 1px solid #777;
+  padding: 0 .75rem 1rem;
+  color: #ffffff;
+  box-shadow: 0 0 40px #444;
+  width: 300px;
+  margin: 20px auto;
+}
+
+.summary h3 {
+  border-bottom: .5px solid #ffffff;
+  padding-bottom: 2px;
+  margin: 5px 5px 10px 5px;
+}
+
+.summary div {
+  line-height: 1.2;
+  padding: .1rem;
+  margin: 0;
+}
+
+/***End of summary********************************/
+#overlay {
+  position: absolute;
+  top: 5px;
+  left: 40px;
+  border: 1px solid #000;
+  padding: .5rem;
+  box-shadow: 0 0 30px #111;
+  opacity: .85;
+
+}
+
+#article {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 70px auto 10px auto;
+
+}
+
+#article img {
+  max-width: 100%;
+
+}
+
+#article a {
+  font-size: small;
+}
+
+
+#hide,
+grid-container,
+grid-item {
+  display: none;
+}
+
+#map img {
+  width: 100%;
+}
+
+#address {
+  padding: 1em;
+  margin: 1em;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: .5rem;
+  color: black;
+}
+
+footer a {
+  color: white;
+}
+
+/********Search Container*********/
+
+#searchContainer{
+margin-left: auto;
+margin-right: auto;
+}

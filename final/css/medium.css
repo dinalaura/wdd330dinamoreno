@@ -30,7 +30,7 @@
 	.grid-container {
 		display: grid;
 		grid-template-columns: auto auto auto auto auto;
-		background-color: burlywood;
+		background-color: green;
 		padding: 2px;
 		max-width: 520px;
 		margin-left: auto;
@@ -105,29 +105,3 @@
 	}
 
 	/*End of header*/
-
-
-	/* Navigation */
-	.navigation {
-		display: flex;
-	}
-
-	.navigation li {
-		display: block;
-		flex: 1 1 auto;
-	}
-
-	.navigation a {
-		text-align: center;
-	}
-
-	.navigation li:first-child {
-		display: none;
-	}
-
-	/*End of navigation***************/
-
-
-
-
-}

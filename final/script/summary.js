@@ -9,12 +9,14 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=19541
         const high = document.querySelector('#high');
         const humidity = document.querySelector('#humidity');
         const speed = document.querySelector('#speed');
+        const nameCity = document.querySelector('#nameCity');
 
-        condition.textContent = `${jsObject.weather[0].main}`;
-        temp.textContent = `${jsObject.main.temp} °F`;
-        high.textContent = `${jsObject.main.temp_max} °F`;
-        humidity.textContent = `${jsObject.main.humidity}%`;
-        speed.textContent = `${jsObject.wind.speed} mph`;
+        nameCity.textContent = `${cityName} ☼`;
+        condition.textContent = `Currently: ${jsObject.weather[0].main}`;
+        temp.textContent = `Current: ${jsObject.main.temp} °F`;
+        high.textContent = `High: ${jsObject.main.temp_max} °F`;
+        humidity.textContent = `Humidity: ${jsObject.main.humidity}%`;
+        speed.textContent = `Wind Speed: ${jsObject.wind.speed} mph`;
 
     });
 }
