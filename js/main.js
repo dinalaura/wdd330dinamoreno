@@ -20,7 +20,7 @@ const links = [{
   },
   {
     label: "Week6 ToDos App (works better in Firefox)",
-    url: "todos/index.html"
+    url: "week6/index.html"
   },
   {
     label: "Week7 Notes",
