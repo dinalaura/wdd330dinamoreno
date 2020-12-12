@@ -5,18 +5,13 @@ fetch(requestURL)
   return response.json();
 })
 .then(function(jsonObject){
-console.table(jsonObject);
+//console.table(jsonObject);
   const pokemon = jsonObject['results'];
 
   pokemon.forEach(pokemon => {
     let card = document.createElement('section');
     let h2 = document.createElement('h2');
-    let p1 = document.createElement('p');
-    let p2 = document.createElement('p');
-    let image = document.createElement('img');
-
-
-
+ 
     h2.textContent = `${pokemon.name}`;
 
     card.appendChild(h2);
@@ -34,17 +29,12 @@ fetch(URL)
   return response.json();
 })
 .then(function(jsonObject){
-console.table(jsonObject);
+//console.table(jsonObject);
   const sw = jsonObject['results'];
 
   sw.forEach(sw => {
     let card = document.createElement('section');
     let h2 = document.createElement('h2');
-    let p1 = document.createElement('p');
-    let p2 = document.createElement('p');
-    let image = document.createElement('img');
-
-
 
     h2.textContent = `${sw.name}`;
 
