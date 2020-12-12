@@ -1,15 +1,12 @@
-/* document.querySelector("#uno").addEventListener("click", myFunction);
+const cell = ;
+const playerOne = "O";
+const playerTwo = "X";
+cell.forEach((element) => {
+  element.addEventListener('click', () => myFunction(element));
+});
 
 function myFunction() {
-
-  document.querySelector("#uno").innerHTML = "O";
-
-} */
-
-document.querySelector("#uno").addEventListener("click", myFunction);
-
-function myFunction() {
-
-  document.querySelector("#uno").innerHTML = "O";
-
+  document.querySelector(".grid-item").innerHTML = playerOne;
 }
+cell.addEventListener('click', myFunction);
+

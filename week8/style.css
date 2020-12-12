@@ -1,0 +1,11 @@
+h1, h2{
+    text-align: center;
+}
+#pokemon{
+    background-color: #3B4CCA;
+}
+
+#pokemon h1, #pokemon h2{
+    color: #FFDE00
+}
+
