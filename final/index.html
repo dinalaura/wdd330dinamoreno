@@ -24,7 +24,7 @@
         <section>
             <div id="searchContainer">
                 <input class="searchControl" type="text" placeholder="City Name" id="searchInput">
-                <button class="searchControl" id="searchBtn">Search</button>
+                <button class="searchControl" id="searchBtn" onclick="forecast()">Search</button>
             </div>
             <div id="firstsection">
                 <picture>
@@ -78,11 +78,11 @@
                 <div class="grid-image">
                     <img src="#" alt="" id="icon5">
                 </div>
-                <div class="grid-f" id="forecast1">&deg;F</div>
-                <div class="grid-f" id="forecast2">&deg;F</div>
-                <div class="grid-f" id="forecast3">&deg;F</div>
-                <div class="grid-f" id="forecast4">&deg;F</div>
-                <div class="grid-f" id="forecast5">&deg;F</div>
+                <div class="grid-f" id="forecast1"></div>
+                <div class="grid-f" id="forecast2"></div>
+                <div class="grid-f" id="forecast3"></div>
+                <div class="grid-f" id="forecast4"></div>
+                <div class="grid-f" id="forecast5"></div>
             </div>
         </section>
     </main>
@@ -90,9 +90,8 @@
         &copy; Attributions | Open Weather API
         <br>
     </footer>
-    <script src="script/forecast.js"></script>
-    <script src="script/summary.js"></script>
+    <script type="module" src="main.js"></script>
+ <script src="script/summary.js"></script>
     <script src="script/windchill.js"></script>
-</body>
 
 </html>
