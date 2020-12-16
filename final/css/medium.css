@@ -35,7 +35,6 @@
 	}
 
 	.grid-header {
-		border: 1px solid rgba(0, 0, 0, 0.8);
 		padding: 20px;
 		text-align: center;
 		font-weight: bold;
@@ -44,13 +43,9 @@
 	.grid-image {
 		padding: 20px 20px 5px 20px;
 		text-align: center;
-		border-left: 1px solid rgba(0, 0, 0, 0.8);
-		border-right: 1px solid rgba(0, 0, 0, 0.8);
 	}
 
 	.grid-f {
-		border: 1px solid rgba(0, 0, 0, 0.8);
-		border-top: none;
 		padding: 5px 20px 20px 20px;
 		text-align: center;
 	}
