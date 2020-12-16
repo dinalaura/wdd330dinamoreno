@@ -21,7 +21,7 @@ fetch(requestURL)
   });
 });
 
-
+/*
 const URL = "https://swapi.dev/api/people";
 
 fetch(URL)
@@ -44,3 +44,4 @@ fetch(URL)
     
   });
 });
+*/

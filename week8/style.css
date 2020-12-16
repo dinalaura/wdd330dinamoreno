@@ -13,3 +13,8 @@ h1, h2{
     background-image: url("https://cdn-3.expansion.mx/dims4/default/5869fff/2147483647/strip/true/crop/1280x720+0+0/resize/1800x1013!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2Fd0%2F81%2F63f7ce8f40b3a57ccc2485d30c2e%2Fstar-wars-fall.jpeg");
     text-shadow: 2px 2px white;
 }
+
+a{
+    color: white;
+    text-decoration: none;
+}
