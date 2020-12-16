@@ -1,12 +1,24 @@
-const cell = ;
-const playerOne = "O";
-const playerTwo = "X";
-cell.forEach((element) => {
-  element.addEventListener('click', () => myFunction(element));
-});
+document.addEventListener('DOMContentLoaded', () => {
+  const squares = document.querySelectorAll('.grid div')
+  const playerDisplay = document.querySelector('#player')
 
-function myFunction() {
-  document.querySelector(".grid-item").innerHTML = playerOne;
-}
-cell.addEventListener('click', myFunction);
+  let currentPlayer = 'playerX'
 
+  squares.forEach(square => {
+    square.addEventListener('click', clickOutcome)
+  })
+
+  function clickOutcome(e) {
+    const squareArray = Array.from(squares)
+    const index = squareArray.indexOf(e.target)
+    playerDisplay.innerHTML = currentPlayer
+
+    if(currentPlayer === 'playerX') {
+      squares[index].classList.add('playerX')
+      currentPlayer = 'playerO'
+    } else {
+      squares[index].classList.add('playerO')
+      currentPlayer = 'playerX'
+    }
+  }
+})
