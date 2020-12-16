@@ -1,4 +1,3 @@
-
 /*-----------------------Weather Summary------------------------------------------*/
 function searchWeather(cityName) {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=195414e543ad58fb7aea951c77ee178a&units=imperial`)
@@ -12,12 +11,38 @@ function searchWeather(cityName) {
             const speed = document.querySelector('#speed');
             const nameCity = document.querySelector('#nameCity');
 
+            document.querySelector('.summary').style.backgroundColor = "#407899";
+            document.querySelector('.summary').style.border = "1px solid #777";
+            document.querySelector('.summary').style.boxShadow = "0 0 40px #444";
+
             nameCity.textContent = `${cityName}`;
             condition.textContent = `Currently: ${jsObject.weather[0].main}`;
             temp.textContent = `Current: ${jsObject.main.temp} °F`;
             high.textContent = `High: ${jsObject.main.temp_max} °F`;
             humidity.textContent = `Humidity: ${jsObject.main.humidity}%`;
             speed.textContent = `Wind Speed: ${jsObject.wind.speed} mph`;
+
+            switch (jsObject.weather[0].main) {
+                case 'Clear':
+                    document.body.style.backgroundImage = 'url("clear.jpg")';
+                    break;
+                case 'Clouds':
+                    document.body.style.backgroundImage = 'url("clouds.jpg")';
+                    break;
+                case 'Rain':
+                case 'Drizzle':
+                case 'Mist':
+                    document.body.style.backgroundImage = 'url("rain.jpg")';
+                    break;
+                case 'Thunderstorm':
+                    document.body.style.backgroundImage = 'url("storm.jpg")';
+                    break;
+                case 'Snow':
+                    document.body.style.backgroundImage = 'url("snow.jpg")';
+                    break;
+                default:
+                    break;
+            }
 
         });
 
@@ -45,7 +70,9 @@ function searchWeather(cityName) {
                 document.getElementById(`icon${day + 1}`).setAttribute('src', imagesrc);
                 document.getElementById(`icon${day + 1}`).setAttribute('alt', desc);
                 day++;
+
             });
+            document.querySelector('.grid-container').style.backgroundColor = "#bf9cac";
         });
 }
 
